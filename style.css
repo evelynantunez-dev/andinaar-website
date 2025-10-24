@@ -1,0 +1,404 @@
+/* --------------------
+   VARIABLES / COMIENZO
+   -------------------- */
+:root{
+  --claro:#FFFFF3;
+  --oscuro:#08262C;
+  --azul:#003945;
+  --celeste:#2A9FA8;
+  --amarillo:#FFE229;
+  --crema:#F5F2A6;
+
+  /* Banner */
+  --mont-overlap:0px;
+  --banner-pad-b:clamp(2rem,5vw,3rem);
+}
+/* --------------------
+   VARIABLES / FIN
+   -------------------- */
+
+/* --------------------
+   RESETEO / COMIENZO
+   -------------------- */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Instrument Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--claro);color:var(--oscuro);line-height:1.6}
+a:focus-visible,button:focus-visible{outline:2px dashed var(--amarillo);outline-offset:3px}
+section[id]{scroll-margin-top:96px}
+/* --------------------
+   RESETEO / FIN
+   -------------------- */
+
+/* --------------------
+   HEADER / COMIENZO
+   -------------------- */
+header{
+  position:fixed;inset:0 0 auto 0;width:100%;
+  background:linear-gradient(to bottom,var(--azul) 0%,rgba(0,57,69,.85) 60%,rgba(0,57,69,0) 100%);
+  z-index:1000;transition:background .3s ease;
+}
+.navbar{
+  position:relative;display:flex;align-items:center;gap:1rem;
+  max-width:1200px;margin:0 auto;padding:1rem 1.25rem;color:var(--crema);width:100%;
+}
+
+/* Logo */
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo-img{height:45px;width:auto;display:block}
+.full-logo{display:block}.small-logo{display:none}
+
+/* Menú (desktop) */
+.menu-panel{display:flex;align-items:center;gap:1.5rem;width:100%}
+.nav-center{
+  list-style:none;display:flex;gap:2rem;align-items:center;margin:0;
+  position:absolute;left:50%;transform:translateX(-50%);
+}
+.nav-center a{
+  color:var(--crema);text-decoration:none;font-weight:500;position:relative;padding-bottom:6px;
+}
+.nav-center a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--crema);transition:width .25s ease;
+}
+.nav-center a:hover::after,.nav-center a.active::after{width:100%}
+.nav-contacto{
+  margin-left:auto;background:transparent;border:2px solid var(--crema);color:var(--crema);
+  padding:.45rem .9rem;border-radius:20px;text-decoration:none;font-weight:600;transition:all .2s ease;
+}
+.nav-contacto:hover{transform:translateY(-1px)}
+
+/* Desktop: el contenedor del menú debe ocupar el espacio flexible
+   para poder empujar el botón "Contacto" a la derecha */
+@media (min-width: 769px){
+  .menu-panel{
+    position: static !important;
+    display: flex !important;
+    align-items: center;
+    gap: 1.5rem;
+
+    /* clave: que ocupe todo el ancho disponible */
+    flex: 1 1 auto !important;
+    width: 100% !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    z-index: auto !important;
+  }
+
+  /* empuja el botón a la derecha */
+  .nav-contacto{
+    margin-left: auto;
+  }
+}
+
+/* --------------------
+   HEADER / FIN
+   -------------------- */
+
+/* --------------------
+   HAMBURGUESA / COMIENZO
+   -------------------- */
+.hamburger-btn{
+  display:none;width:36px;cursor:pointer;margin-left:1rem;background:transparent;border:0;z-index:1001;
+}
+.hamburger-btn span{
+  display:block;width:100%;height:4px;border-radius:3px;background:var(--crema);margin:6px 0;transition:all .3s;
+}
+.hamburger-btn.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
+.hamburger-btn.active span:nth-child(2){opacity:0}
+.hamburger-btn.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+/* --------------------
+   HAMBURGUESA / FIN
+   -------------------- */
+
+/* --------------------
+   HERO / COMIENZO
+   -------------------- */
+.hero{
+  height:100vh;background:url('andina-header.jpg') no-repeat center/cover;
+  display:flex;align-items:center;justify-content:center;position:relative;text-align:center;
+}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(8,38,44,.055);z-index:1}
+.hero-content{position:relative;z-index:2}
+.hero-logo{width:750px;max-width:80%;height:auto;filter:drop-shadow(0 0 20px rgba(0,0,0,.4));animation:fadeIn .9s ease-out}
+@keyframes fadeIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+/* --------------------
+   HERO / FIN
+   -------------------- */
+
+/* --------------------
+   BANNER AZUL / COMIENZO
+   -------------------- */
+.banner-azul{background:var(--azul);color:var(--claro);padding:3.5rem 2rem var(--banner-pad-b)}
+.banner-wrap{max-width:1100px;margin:0 auto;position:relative;padding-bottom:0}
+.sello-sol{position:absolute;left:2rem;top:50%;transform:translateY(-50%);max-width:clamp(110px,16vw,160px);height:auto}
+.banner-text{text-align:center;position:relative;max-width:600px;margin:0 auto;z-index:1}
+.banner-text h3{font-size:clamp(1.4rem,2.2vw,2rem);font-weight:600;margin-bottom:.6rem}
+.banner-text em{font-family:"Coranto 2",serif;font-style:italic;font-weight:700}
+.banner-text p{font-size:1.05rem;line-height:1.6;opacity:.92}
+.banner-montana{position:absolute;right:12px;bottom:calc(-1 * var(--mont-overlap));width:clamp(120px,35vw,200px);height:auto;pointer-events:none;z-index:0}
+/* --------------------
+   BANNER AZUL / FIN
+   -------------------- */
+
+/* --------------------
+   SECCIONES / COMIENZO
+   -------------------- */
+.section{
+  padding:7rem 2rem;min-height:100vh;display:flex;justify-content:center;align-items:center;
+}
+.section.alt{background:var(--celeste);color:var(--claro)}
+.content{max-width:800px;text-align:center}
+.content h2{font-family:"Coranto 2",serif;font-size:clamp(2rem,3.5vw,2.7rem);margin-bottom:1.5rem;color:var(--azul)}
+.section.alt h2{color:var(--amarillo)}
+.content p{font-size:1.1rem;margin-bottom:2rem}
+/* --------------------
+   SECCIONES / FIN
+   -------------------- */
+
+/* --------------------
+   BOTONES / COMIENZO
+   -------------------- */
+.btn{
+  display:inline-block;background:var(--amarillo);color:var(--oscuro);
+  padding:.75rem 1.5rem;border-radius:5px;text-decoration:none;font-weight:600;
+  transition:transform .15s ease,background .2s ease;
+}
+.btn:hover{background:var(--claro);transform:translateY(-1px)}
+.btn-primary{background:var(--celeste);color:var(--claro);border-radius:10px;padding:.85rem 1.25rem;font-weight:700}
+.btn-primary:hover{background:#2796a0}
+/* --------------------
+   BOTONES / FIN
+   -------------------- */
+
+/* --------------------
+   SERVICIOS / COMIENZO
+   -------------------- */
+.servicios{
+background: url('text-servicios2.png') no-repeat center center / cover;
+  padding-block:clamp(3rem,6vw,5rem);
+  padding-inline:1.25rem;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;          
+}
+.srv-container{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+
+/* Header sin fondo/sombras y sin colapso de márgenes */
+.srv-head{
+  position:relative;max-width:1100px;;margin:0 auto;padding-top:.25rem;
+  background:transparent !important;box-shadow:none !important;
+}
+.srv-head h2{
+  font-size:clamp(2rem,4.5vw,3rem);font-weight:500;color:#32686F;line-height:1.15;
+  margin: 0 0 0 0;
+}
+.srv-head .srv-mark{font-family:"Coranto 2",serif;font-weight:700;font-style:italic}
+.srv-head .srv-sub{margin:.75rem 0 0 0;max-width:760px;color:#2a3d41}
+
+/* Grid */
+.srv-grid{
+  margin-top:clamp(1.25rem,3vw,2rem);
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(1rem,2.8vw,1.8rem);
+}
+.srv-card{
+  padding:1.25rem;
+  border-radius:10px;
+
+  /* 👇 Fondo con tu textura */
+  background: url("tex-papel.png") repeat;
+  background-size:cover
+}
+
+.srv-card h3{color:#32686F;font-size:clamp(1.15rem,2.2vw,1.25rem);margin:0 0 .55rem 0;font-weight:800}
+.srv-card h3 .amp,.srv-card h3 .slash{font-family:"Coranto 2",serif;font-style:italic;color:var(--celeste);font-weight:700}
+.srv-card p{color:#28464e}
+.srv-card p strong{color:#0F2E35;font-weight:800}
+
+/* CTA */
+.srv-cta{display:flex;justify-content:center;margin-top:clamp(1.5rem,3.5vw,2.25rem)}
+
+/* Decoraciones */
+.srv-deco {
+  position: absolute;
+  z-index: 0;
+  opacity: .85;
+  pointer-events: none;
+}
+
+/* Churros (abajo a la izquierda) */
+.srv-churros {
+  bottom: 80px;   /* 👈 más alto para despegar de la card */
+  left: -70px;    /* 👈 sobresale un poco hacia afuera */
+  width: 130px;
+}
+
+/* Mates (arriba a la derecha) */
+.srv-mates {
+  top: 40px;      /* 👈 lo bajamos un poco más para que no tape el título */
+  right: -70px;   /* 👈 más afuera, separado de la card */
+  width: 140px;
+}
+
+/* En mobile las ocultamos */
+@media (max-width: 768px) {
+  .srv-churros,
+  .srv-mates {
+    display: none;
+  }
+}
+
+
+
+/* Responsive grid */
+@media (max-width:1024px){.srv-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){
+  .srv-grid{grid-template-columns:1fr}
+  .srv-deco-left,.srv-deco-right{display:none}
+}
+/* --------------------
+   SERVICIOS / FIN
+   -------------------- */
+
+/* --------------------
+   RESPONSIVE NAV / COMIENZO
+   -------------------- */
+@media (min-width:769px){
+  /* ⬅️ En desktop el panel NO tiene fondo ni posicionamiento absoluto */
+  .menu-panel{
+    position:static !important;display:flex !important;align-items:center;gap:1.5rem;
+    width:auto !important;background:transparent !important;border:0 !important;border-radius:0 !important;
+    box-shadow:none !important;padding:0 !important;z-index:auto !important;
+  }
+  .navbar.active .menu-panel{background:transparent !important;box-shadow:none !important}
+}
+
+@media (max-width:768px){
+  .full-logo{display:none}.small-logo{display:block;height:35px}
+  .hamburger-btn{display:block;margin-left:auto}
+
+  /* Dropdown móvil con gradiente (SOLO mobile) */
+  .menu-panel{
+    position:absolute;top:100%;right:1rem;width:min(86vw,320px);
+    background:linear-gradient(to bottom,rgba(0,57,69,.95) 0%,rgba(0,57,69,.85) 55%,rgba(0,57,69,.70) 100%);
+    backdrop-filter:saturate(115%) blur(8px);-webkit-backdrop-filter:saturate(115%) blur(8px);
+    border:1px solid rgba(245,242,166,.18);border-radius:14px;
+    box-shadow:0 12px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.04);
+    padding:.9rem 0;z-index:1000;display:none;
+  }
+  .navbar.active .menu-panel{display:flex;flex-direction:column;align-items:stretch;animation:slideDown .25s ease forwards}
+  @keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+
+  .navbar.active .nav-center{position:static;left:auto;transform:none;display:flex;flex-direction:column;gap:.25rem;padding:0 .75rem}
+  .navbar.active .nav-center a{display:block;padding:.7rem .5rem;border-radius:8px;color:var(--crema)}
+  .navbar.active .nav-center a:hover{background:rgba(255,255,243,.06)}
+  .navbar.active .nav-center a::after{content:none}
+
+  .navbar.active .nav-contacto{
+    display:block;margin:.35rem .75rem .6rem;border:1px solid var(--crema);
+    text-align:center;padding:.6rem .75rem;border-radius:10px;color:var(--crema)
+  }
+
+  /* Banner mobile */
+  :root{--banner-pad-b:4rem}
+  .sello-sol{position:static;transform:none;display:block;margin:0 auto 1rem}
+  .banner-text{max-width:100%}
+}
+/* --------------------
+   RESPONSIVE NAV / FIN
+   -------------------- */
+
+/* --------------------
+   FOOTER / COMIENZO
+   -------------------- */
+footer{background:var(--oscuro);color:var(--claro);text-align:center;padding:1rem;font-size:.9rem}
+footer p{margin:0}
+/* --------------------
+   FOOTER / FIN
+   -------------------- */
+
+/* Motion safe */
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+/* --- SERVICIOS: acolchado para ilustraciones + posiciones coherentes --- */
+
+/* Desktop y tablets grandes */
+@media (min-width: 1024px){
+  /* margen de seguridad para las ilustraciones */
+  :root{
+    --srv-deco-pad: 120px;   /* subí/bajá este valor si querés más/menos aire */
+  }
+
+  /* le damos “aire” interno al contenedor para que no choquen con las cards */
+  .servicios .srv-container{
+    position: relative;               /* ya lo tenías, lo reafirmamos */
+    padding-left:  var(--srv-deco-pad);
+    padding-right: var(--srv-deco-pad);
+    padding-bottom: 40px;             /* un poco más de aire abajo */
+  }
+
+  /* ajustamos posiciones tomando como referencia ese padding */
+  .srv-deco.srv-churros{
+    bottom: 100px;                               /* más alto = más lejos de la card */
+    left: calc(-1 * var(--srv-deco-pad) + 20px); /* queda fuera, pero alineado al padding */
+    width: 180px;
+  }
+
+  .srv-deco.srv-mates{
+    top:  30px;                                   /* bájalo/súbelo a gusto */
+    right: calc(-1 * var(--srv-deco-pad) + 20px);
+    width: 180px;
+  }
+}
+
+/* Tablets / mobile: sin ilustraciones (como ya tenías) */
+@media (max-width: 1023px){
+  .srv-deco.srv-churros,
+  .srv-deco.srv-mates{
+    display:none !important;
+  }
+}
+
+
+/* Estilos generales de la montaña y sello */
+.banner-montana {
+  position: absolute;
+  right: 12px;
+  bottom: calc(-1 * var(--mont-overlap));
+  width: clamp(120px, 35vw, 200px);
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sello-sol {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: clamp(110px, 16vw, 160px);
+  height: auto;
+}
+
+/* 🔽 Ajustes SOLO en mobile */
+@media (max-width: 768px) {
+  /* Ocultar la montaña en mobile */
+  .banner-montana {
+    display: none;
+  }
+
+  /* Mover la estampa debajo del texto */
+  .sello-sol {
+    position: static;
+    display: block;
+    margin: 1.5rem auto 0; /* centrada debajo del texto */
+    transform: none;       /* quitar el translate */
+  }
+
+  .banner-text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

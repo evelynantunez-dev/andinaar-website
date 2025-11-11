@@ -5,194 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andina | Agencia Creativa</title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Andina | Agencia Creativa">
-    <meta property="og:description" content="Creatividad con raíz: diseño, branding, web y más.">
-    <meta property="og:image" content="https://andinaar.com/andina-seo.png">
-    <meta property="og:url" content="https://andinaar.com">
-    <meta property="og:type" content="website">
+  <!-- SEO básicos -->
+  <link rel="canonical" href="https://andinaar.com/" />
+  <meta name="description" content="Creatividad con raíz: diseño, branding, web y más. Construimos marcas con propósito." />
+  <meta name="theme-color" content="#003945" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#001e24" media="(prefers-color-scheme: dark)">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Andina | Agencia Creativa">
-    <meta name="twitter:description" content="Creatividad con raíz: diseño, branding, web y más.">
-    <meta name="twitter:image" content="https://andinaar.com/andina-seo.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Andina | Agencia Creativa">
+  <meta property="og:description" content="Creatividad con raíz: diseño, branding, web y más.">
+  <meta property="og:image" content="https://andinaar.com/andina-seo.png">
+  <meta property="og:url" content="https://andinaar.com">
+  <meta property="og:type" content="website">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Andina | Agencia Creativa">
+  <meta name="twitter:description" content="Creatividad con raíz: diseño, branding, web y más.">
+  <meta name="twitter:image" content="https://andinaar.com/andina-seo.png">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="reduccion-clear.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="reduccion-dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" href="reduccion-clear.png" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-icon" href="reduccion-dark.png" media="(prefers-color-scheme: dark)">
 
-      <!-- Favicon modo CLARO -->
-    <link rel="icon" type="image/png" href="reduccion-clear.png" media="(prefers-color-scheme: light)">
-
-    <!-- Favicon modo OSCURO -->
-    <link rel="icon" type="image/png" href="reduccion-dark.png" media="(prefers-color-scheme: dark)">
-
-    <!-- Apple/iOS -->
-    <link rel="apple-touch-icon" href="reduccion-clear.png" media="(prefers-color-scheme: light)">
-    <link rel="apple-touch-icon" href="reduccion-dark.png" media="(prefers-color-scheme: dark)">
-
-
-  <!-- Fuentes (Typekit con Coranto 2) -->
+  <!-- Tipografías -->
   <link rel="preconnect" href="https://use.typekit.net" crossorigin>
   <link rel="stylesheet" href="https://use.typekit.net/dcv1wfh.css">
 
-  <!-- Estilos -->
+  <!-- Preload imágenes -->
+  <link rel="preload" as="image" href="andina-header.jpg" imagesrcset="andina-header.jpg 1x, andina-header@2x.jpg 2x">
+  <link rel="preload" as="image" href="andina1.png">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ====================
-       HEADER / COMIENZO
-       ==================== -->
+  <!-- ==================== HEADER ==================== -->
   <header>
     <nav class="navbar" aria-label="Barra de navegación">
       <!-- LOGO -->
       <a href="#inicio" class="logo" aria-label="Andina - Ir al inicio">
-        <img src="andina2.png" alt="Logo Andina" class="logo-img full-logo">
-        <img src="reduccion.png" alt="Logo reducido" class="logo-img small-logo">
+        <img src="andina2.png" alt="Logo Andina" class="logo-img full-logo" loading="eager" decoding="sync">
+        <img src="reduccion.png" alt="Logo reducido" class="logo-img small-logo" width="120" height="35" loading="eager" decoding="sync">
       </a>
 
-      <!-- MENÚ + CONTACTO (centro en desktop / panel en mobile) -->
+      <!-- MENÚ + CONTACTO -->
       <div class="menu-panel" id="menu-principal">
         <ul class="nav-center" role="menubar" aria-label="Secciones del sitio">
           <li role="none"><a role="menuitem" href="#inicio">Inicio</a></li>
-          <li role="none"><a role="menuitem" href="#agencia">Agencia</a></li>
           <li role="none"><a role="menuitem" href="#servicios">Servicios</a></li>
+          <li role="none"><a role="menuitem" href="#sobre">Sobre Nosotros</a></li>
           <li role="none"><a role="menuitem" href="#portfolio">Portfolio</a></li>
         </ul>
         <a href="#contacto" class="nav-contacto">Contacto</a>
       </div>
 
-      <!-- HAMBURGUESA (derecha, solo mobile) -->
-      <button class="hamburger-btn"
-              type="button"
-              aria-label="Abrir menú"
-              aria-expanded="false"
-              aria-controls="menu-principal">
+      <!-- HAMBURGUESA -->
+      <button class="hamburger-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
-  <!-- ====================
-       HEADER / FIN
-       ==================== -->
 
-
-  <!-- ====================
-       HERO / COMIENZO
-       ==================== -->
+  <!-- ==================== HERO ==================== -->
   <section id="inicio" class="hero" aria-label="Portada">
     <div class="hero-content">
-      <img src="andina1.png" alt="Logo Andina" class="hero-logo">
+      <img src="andina1.png" alt="Isologo Andina" class="hero-logo" loading="eager" decoding="async">
     </div>
   </section>
-  <!-- ====================
-       HERO / FIN
-       ==================== -->
 
-
-  <!-- ====================
-       BANNER AZUL / COMIENZO
-       ==================== -->
+  <!-- ==================== BANNER AZUL ==================== -->
   <section class="banner-azul" aria-label="Manifiesto">
     <div class="banner-wrap">
-      <!-- Sello + sol (izquierda) -->
-      <img src="banner azul.png" alt="" class="sello-sol" loading="lazy" decoding="async" aria-hidden="true">
-
-      <!-- Texto centrado -->
+      <img src="banner-azul.png" alt="" class="sello-sol" loading="lazy" decoding="async" aria-hidden="true" width="160" height="160">
       <div class="banner-text">
         <h3>Creemos en la <em>creatividad con raíz:</em></h3>
         <p>Aquella que surge de lo local, de lo natural,<br> y se proyecta hacia lo más alto.</p>
       </div>
-
-      <!-- Montañita (abajo a la derecha) -->
-      <img src="montana-bann.png" alt="" class="banner-montana" loading="lazy" decoding="async" aria-hidden="true">
+      <img src="montana-bann.png" alt="" class="banner-montana" loading="lazy" decoding="async" aria-hidden="true" width="200" height="120">
     </div>
   </section>
-  <!-- ====================
-       BANNER AZUL / FIN
-       ==================== -->
 
-
-  <!-- ====================
-       AGENCIA / COMIENZO
-       ==================== -->
-  <section id="agencia" class="section" aria-labelledby="ttl-agencia">
-    <div class="content">
-      <h2 id="ttl-agencia">Somos Andina</h2>
-      <p>Una agencia creativa que combina estrategia, diseño y tecnología para construir marcas con propósito. Nos apasiona conectar ideas con personas y dar vida a proyectos que inspiran.</p>
-    </div>
-  </section>
-  <!-- ====================
-       AGENCIA / FIN
-       ==================== -->
-
-
-  <!-- ====================
-       SERVICIOS / COMIENZO
-       ==================== -->
+  <!-- ==================== SERVICIOS ==================== -->
   <section id="servicios" class="servicios" aria-labelledby="ttl-servicios">
     <div class="srv-container">
       <header class="srv-head">
         <h2 id="ttl-servicios">Nuestros <span class="srv-mark">Servicios</span></h2>
-        <p class="srv-sub">
-          En Andina unimos <strong>creatividad</strong>, <strong>estrategia</strong> y
-          <strong>territorio</strong> para construir marcas auténticas.
-        </p>
+        <p class="srv-sub">En Andina unimos <strong>creatividad</strong>, <strong>estrategia</strong> y <strong>territorio</strong> para construir marcas auténticas.</p>
       </header>
 
-      <div class="srv-grid">
-        <article class="srv-card">
+      <div class="srv-grid" role="list">
+        <article class="srv-card" role="listitem">
           <h3>Branding <span class="amp">&</span> estrategia</h3>
-          <p>
-            Construimos marcas con propósito. Acompañamos desde la definición de identidad
-            y posicionamiento, <strong>creando bases sólidas</strong> para crecer con
-            coherencia y proyección.
-          </p>
+          <p>Construimos marcas con propósito. Acompañamos desde la definición de identidad y posicionamiento, <strong>creando bases sólidas</strong> para crecer con coherencia y proyección.</p>
         </article>
-
-        <article class="srv-card">
+        <article class="srv-card" role="listitem">
           <h3>Diseño gráfico <span class="amp">&</span> visual</h3>
-          <p>
-            Desarrollamos piezas visuales que comunican con claridad y estética.
-            <strong>Aplicamos diseño estratégico</strong> en cada soporte para fortalecer
-            la presencia de marca.
-          </p>
+          <p>Desarrollamos piezas visuales que comunican con claridad y estética. <strong>Aplicamos diseño estratégico</strong> en cada soporte para fortalecer la presencia de marca.</p>
         </article>
-
-        <article class="srv-card">
+        <article class="srv-card" role="listitem">
           <h3>Desarrollo digital <span class="slash">/</span> web</h3>
-          <p>
-            Creamos sitios y experiencias digitales enfocadas en usabilidad, rendimiento
-            y conversión. <strong>Transformamos tu presencia online</strong> en una
-            herramienta estratégica.
-          </p>
+          <p>Creamos sitios y experiencias digitales enfocadas en usabilidad, rendimiento y conversión. <strong>Transformamos tu presencia online</strong> en una herramienta estratégica.</p>
         </article>
-
-        <article class="srv-card">
+        <article class="srv-card" role="listitem">
           <h3>Gestión de redes <span class="amp">&</span> contenidos</h3>
-          <p>
-            Planificamos, producimos y gestionamos contenido para redes, conectando marcas
-            con sus comunidades. <strong>Comunicación constante, creativa</strong> y
-            alineada a objetivos reales.
-          </p>
+          <p>Planificamos, producimos y gestionamos contenido para redes, conectando marcas con sus comunidades. <strong>Comunicación constante, creativa</strong> y alineada a objetivos reales.</p>
         </article>
-
-        <article class="srv-card">
+        <article class="srv-card" role="listitem">
           <h3>Producción audiovisual</h3>
-          <p>
-            Generamos contenido visual con impacto: fotografía, video y piezas animadas.
-            <strong>Contamos historias</strong> que transmiten esencia, emoción y
-            profesionalismo.
-          </p>
+          <p>Generamos contenido visual con impacto: fotografía, video y piezas animadas. <strong>Contamos historias</strong> que transmiten esencia, emoción y profesionalismo.</p>
         </article>
-
-        <article class="srv-card">
+        <article class="srv-card" role="listitem">
           <h3>Consultoría <span class="amp">&</span> acompañamiento</h3>
-          <p>
-            Trabajamos como aliados <strong>estratégicos</strong>. Diagnosticamos,
-            proponemos y acompañamos procesos para <strong>potenciar negocios, marcas</strong>
-            y comunicación a largo plazo.
-          </p>
+          <p>Trabajamos como aliados <strong>estratégicos</strong>. Diagnosticamos, proponemos y acompañamos procesos para <strong>potenciar negocios, marcas</strong> y comunicación a largo plazo.</p>
         </article>
       </div>
 
@@ -200,97 +128,232 @@
         <a href="#contacto" class="btn btn-primary">Charlá con nosotros</a>
       </div>
 
-    <!-- Decoraciones -->
-  <img src="churros.png" alt="" class="srv-deco srv-churros" aria-hidden="true">
-  <img src="mates.png"   alt="" class="srv-deco srv-mates"   aria-hidden="true">
+      <!-- Decoraciones -->
+      <img src="churros.png" alt="" class="srv-deco srv-churros" aria-hidden="true" loading="lazy" width="180" height="120">
+      <img src="mates.png"   alt="" class="srv-deco srv-mates"   aria-hidden="true" loading="lazy" width="180" height="140">
+    </div>
+  </section>
 
+<!-- ==================== SERVICIOS – PARTE 2 ==================== -->
+<section id="servicios2" class="servicios" aria-labelledby="ttl-servicios2">
+  <!-- Deco fuera del container para que queden detrás -->
+  <img src="argentina.png" alt="" class="srv-deco s2-arg" aria-hidden="true" loading="lazy" width="220" height="520">
+  <img src="bandera-montanas.png" alt="" class="srv-deco s2-mont" aria-hidden="true" loading="lazy" width="1280" height="360">
+
+  <div class="srv-container">
+    <header class="srv-head">
+      <h2 id="ttl-servicios2">Marketing <span class="srv-mark">Digital</span> &amp; Campañas</h2>
+      <p class="srv-sub">Desarrollamos campañas integrales, desde la idea hasta la ejecución.
+        <strong>Activamos medios, impulsamos visibilidad y medimos resultados para optimizar cada acción.</strong>
+      </p>
+    </header>
+
+    <div class="srv-grid" role="list">
+
+      <!-- 1 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M10.5 18a7.5 7.5 0 1 1 5.12-13l3.88 3.88M15 15l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Consultoría en Marketing Digital</h3>
+        <p>Acompañamos a marcas en la definición de estrategias digitales, identificando oportunidades, canales clave y acciones para crecer con enfoque en resultados.</p>
+      </article>
+
+      <!-- 2 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 11h6l8-4v10l-8-4H3zM6 11v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Publicidad en Meta</h3>
+        <p>Creamos campañas segmentadas para aumentar alcance, tráfico o conversiones, optimizando anuncios según objetivos de marca tanto en Facebook como Instagram.</p>
+      </article>
+
+      <!-- 3 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 19l7-14a3 3 0 1 1 2.67 4.33L7 19a3 3 0 1 1-3 0zM20 19a3 3 0 1 1-2.999-3A3 3 0 0 1 20 19z" fill="currentColor"/></svg>
+        </div>
+        <h3>Publicidad en Google Ads</h3>
+        <p>Activamos campañas de búsqueda, display y YouTube para captar usuarios con intención real, generando oportunidades medibles.</p>
+      </article>
+
+      <!-- 4 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 3v8.5a3.5 3.5 0 1 1-3.5-3.5h.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 6a5 5 0 0 0 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Publicidad en TikTok</h3>
+        <p>Desarrollamos campañas creativas y segmentadas para conectar con nuevas audiencias, aumentar visibilidad y generar interacción auténtica.</p>
+      </article>
+
+      <!-- 5 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8L3 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Embudos &amp; Conversión</h3>
+        <p>Diseñamos recorridos estratégicos (landing, formularios, remarketing) para transformar visitas en leads y leads en clientes.</p>
+      </article>
+
+      <!-- 6 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Email Marketing &amp; Automatización</h3>
+        <p>Creamos campañas y flujos automatizados que informan, persuaden y fidelizan según el comportamiento del usuario.</p>
+      </article>
+
+      <!-- 7 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 5v10c0 1.66 3.13 3 7 3s7-1.34 7-3V5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Gestión de Bases de Datos</h3>
+        <p>Organizamos, segmentamos y potenciamos tus contactos para maximizar la conversión y la comunicación personalizada.</p>
+      </article>
+
+      <!-- 8 -->
+      <article class="srv-card" role="listitem">
+        <div class="srv-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 20V9m6 11V4m6 16v-8m4 8H4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Análisis, Métricas &amp; Optimización</h3>
+        <p>Medimos el rendimiento de campañas, interpretamos datos y ajustamos estrategias para mejorar cada resultado.</p>
+      </article>
+
+    </div>
+
+    <div class="srv-cta">
+      <a href="#contacto" class="btn btn-primary">¡Contactanos!</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ==================== SOBRE (placeholder) ==================== -->
+  <section id="sobre" class="section" aria-label="Sobre (en construcción)"></section>
+
+  <!-- ==================== PORTFOLIO ==================== -->
+  <section id="portfolio" class="portfolio" aria-labelledby="ttl-portfolio">
+    <div class="pf-wrap reveal">
+      <h2 id="ttl-portfolio" class="pf-title">Conocé algunos de <em>nuestros proyectos</em></h2>
+
+      <div class="pf-grid">
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 1 (próximamente)"></a>
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 2 (próximamente)"></a>
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 3 (próximamente)"></a>
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 4 (próximamente)"></a>
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 5 (próximamente)"></a>
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 6 (próximamente)"></a>
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 7 (próximamente)"></a>
+        <a class="pf-item" href="#" aria-disabled="true" aria-label="Proyecto 8 (próximamente)"></a>
+      </div>
+
+      <a class="btn pf-cta" href="https://www.behance.net/andinaar" target="_blank" rel="noopener">
+        <img src="behance.png" alt="" width="16" height="16" style="vertical-align:-2px;margin-right:.5rem"> Andina Behance
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section id="contacto" class="contacto" aria-labelledby="ttl-contacto">
+    <div class="contacto__wrap">
+
+      <div class="contacto__copy">
+        <h2 id="ttl-contacto">Queremos <em>escucharte</em></h2>
+        <p>
+          Si tenés un proyecto, una idea o simplemente querés saber cómo podemos ayudarte, escribinos.
+          <strong>Nos encanta construir desde el diálogo y encontrar soluciones que hagan crecer a las marcas con identidad.</strong>
+        </p>
+      </div>
+
+      <form class="contacto__card contacto--float"
+            action="mailto:matiasperalta@andinaar.com"
+            method="post" enctype="text/plain" target="_blank" novalidate>
+
+        <label class="fl">
+          <input type="text" name="Nombre" placeholder=" " required>
+          <span>Nombre y apellido</span>
+        </label>
+
+        <label class="fl">
+          <input type="email" name="Email" placeholder=" " required>
+          <span>Email</span>
+        </label>
+
+        <label class="fl">
+          <input type="tel" name="Telefono" placeholder=" ">
+          <span>Teléfono</span>
+        </label>
+
+        <label class="fl fl-select">
+          <select name="Motivo" required>
+            <option value="" disabled selected></option>
+            <option>Branding / estrategia</option>
+            <option>Diseño gráfico</option>
+            <option>Desarrollo web</option>
+            <option>Gestión de redes</option>
+            <option>Producción audiovisual</option>
+            <option>Consultoría / acompañamiento</option>
+          </select>
+          <span>Seleccioná un tema</span>
+          <svg class="caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </label>
+
+        <label class="fl">
+          <textarea name="Mensaje" rows="4" placeholder=" "></textarea>
+          <span>Contanos un poco más</span>
+        </label>
+
+        <button type="submit" class="btn-contacto btn-contacto--flat">Hablemos</button>
+      </form>
 
     </div>
   </section>
-  <!-- ====================
-       SERVICIOS / FIN
-       ==================== -->
 
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="footer" class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand" aria-label="Andina Agencia Creativa">
+        <img src="andina1.png" alt="Andina." class="footer-logo" width="360" height="120" decoding="async" />
+      </div>
 
-  <!-- ====================
-       PORTFOLIO / COMIENZO
-       ==================== -->
-  <section id="portfolio" class="section" aria-labelledby="ttl-portfolio">
-    <div class="content">
-      <h2 id="ttl-portfolio">Portfolio</h2>
-      <p>Explorá algunos de nuestros proyectos destacados. Cada trabajo refleja nuestra forma de pensar: creatividad con propósito y atención al detalle.</p>
+      <ul class="footer-social" aria-label="Redes sociales">
+        <li><a href="https://www.instagram.com/agenciandina.ar/" target="_blank" rel="noopener" aria-label="Instagram"><img src="instagram.png" alt="" width="20" height="20"></a></li>
+        <li><a href="https://www.behance.net/andinaar" target="_blank" rel="noopener" aria-label="Behance"><img src="behance.png" alt="" width="20" height="20"></a></li>
+        <li><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="linkedin.png" alt="" width="20" height="20"></a></li>
+        <li><a href="mailto:matiasperalta@andinaar.com" aria-label="Enviar correo"><img src="gmail.png" alt="" width="20" height="20"></a></li>
+      </ul>
+
+      <hr class="footer-sep" />
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2025 Andina, todos los derechos reservados
+          <span class="dot">|</span>
+          <a href="#">Aviso legal</a>
+          <span class="dot">|</span>
+          <a href="#">Política de cookies</a>
+        </p>
+        <p class="footer-madeby">By Andina Agencia Creativa</p>
+      </div>
     </div>
-  </section>
-  <!-- ====================
-       PORTFOLIO / FIN
-       ==================== -->
-
-
-  <!-- ====================
-       CONTACTO / COMIENZO
-       ==================== -->
-  <section id="contacto" class="section alt" aria-labelledby="ttl-contacto">
-    <div class="content">
-      <h2 id="ttl-contacto">Contacto</h2>
-      <p>¿Querés que tu marca crezca con una identidad sólida? Escribinos y empecemos a crear algo juntos.</p>
-      <a href="mailto:hola@andina.com" class="btn">Escribinos</a>
-    </div>
-  </section>
-  <!-- ====================
-       CONTACTO / FIN
-       ==================== -->
-
-
-  <!-- ====================
-       FOOTER / COMIENZO
-       ==================== -->
-  <footer>
-    <p>© 2025 Andina Agencia Creativa. Todos los derechos reservados.</p>
   </footer>
-  <!-- ====================
-       FOOTER / FIN
-       ==================== -->
 
-
-  <!-- ====================
-       SCRIPTS / COMIENZO
-       ==================== -->
+  <!-- ==================== SCRIPTS ==================== -->
   <script>
-    // Fondo del header al hacer scroll
+    // Header sólido al hacer scroll
     (function(){
       const header = document.querySelector('header');
-      const setBg = () => {
-        header.style.background =
-          (window.scrollY > 50)
-          ? 'var(--azul)'
-          : 'linear-gradient(to bottom, var(--azul) 0%, rgba(0, 57, 69, 0.85) 60%, rgba(0, 57, 69, 0) 100%)';
-      };
-      setBg();
-      window.addEventListener('scroll', setBg, { passive:true });
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 50);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive:true });
     })();
 
-    // Enlace activo en la navbar (+ aria-current)
-    (function(){
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.nav-center a');
-      function setActive(){
-        let current = '';
-        sections.forEach(s=>{
-          const top = s.offsetTop - 100;
-          if (pageYOffset >= top) current = s.id;
-        });
-        navLinks.forEach(a=>{
-          const isActive = a.getAttribute('href') === '#' + current;
-          a.classList.toggle('active', isActive);
-          if (isActive) a.setAttribute('aria-current','page');
-          else a.removeAttribute('aria-current');
-        });
-      }
-      setActive();
-      window.addEventListener('scroll', setActive, { passive:true });
-    })();
-
-    // Hamburguesa (abre/cierra)
+    // Menú hamburguesa
     (function(){
       const burger = document.querySelector('.hamburger-btn');
       const navbar = document.querySelector('.navbar');
@@ -300,10 +363,45 @@
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
     })();
-  </script>
-  <!-- ====================
-       SCRIPTS / FIN
-       ==================== -->
 
+    // Sincroniza --header-h con la altura real del header (para scroll-margin-top)
+    (function(){
+      const root = document.documentElement;
+      const header = document.querySelector('header');
+      function applyHeaderHeight(){
+        const h = header ? header.offsetHeight : 96;
+        root.style.setProperty('--header-h', h + 'px');
+      }
+      applyHeaderHeight();
+      window.addEventListener('load', applyHeaderHeight, { once:true });
+      let t; window.addEventListener('resize', ()=>{ clearTimeout(t); t=setTimeout(applyHeaderHeight,120); });
+    })();
+
+    // Enlace activo con IntersectionObserver
+    (function(){
+      const links = Array.from(document.querySelectorAll('.nav-center a'));
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          links.forEach(a => {
+            const on = a.getAttribute('href') === '#' + id;
+            a.classList.toggle('active', on);
+            if (on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+          });
+        });
+      }, { root:null, rootMargin:'0px 0px -60% 0px', threshold:0 });
+      document.querySelectorAll('section[id]').forEach(s => io.observe(s));
+    })();
+
+    // Animaciones reveal
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+      }, { threshold: 0.15 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
 </body>
 </html>

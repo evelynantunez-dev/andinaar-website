@@ -406,64 +406,65 @@
       </p>
     </div>
 
-    <form
-      class="contacto__card contacto--float"
-      name="contacto-andina"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="empresa"
-      novalidate
-    >
-      <!-- Netlify necesita esto para identificar el form -->
-      <input type="hidden" name="form-name" value="contacto-andina">
+ <form
+  class="contacto__card contacto--float"
+  name="contacto-andina"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="empresa"
+  data-netlify-honeypot="empresa"
+  novalidate
+  action="/gracias.html"
+>
+  <!-- Netlify necesita esto para identificar el form -->
+  <input type="hidden" name="form-name" value="contacto-andina">
 
-      <!-- Honeypot anti-spam (no se ve, no lo completes) -->
-      <p style="display:none">
-        <label>Empresa <input name="empresa"></label>
-      </p>
+  <!-- Honeypot anti-spam (no se ve, no lo completes) -->
+  <p style="display:none">
+    <label>Empresa <input name="empresa"></label>
+  </p>
 
-      <label class="fl">
-        <input type="text" name="Nombre" placeholder=" " required>
-        <span>Nombre y apellido</span>
-      </label>
+  <label class="fl">
+    <input type="text" name="Nombre" placeholder=" " required>
+    <span>Nombre y apellido</span>
+  </label>
 
-      <label class="fl">
-        <input type="email" name="Email" placeholder=" " required>
-        <span>Email</span>
-      </label>
+  <label class="fl">
+    <input type="email" name="Email" placeholder=" " required>
+    <span>Email</span>
+  </label>
 
-      <label class="fl">
-        <input type="tel" name="Telefono" placeholder=" ">
-        <span>Teléfono</span>
-      </label>
+  <label class="fl">
+    <input type="tel" name="Telefono" placeholder=" ">
+    <span>Teléfono</span>
+  </label>
 
-      <label class="fl fl-select">
-        <select name="Motivo" required>
-          <option value="" disabled selected></option>
-          <option>Branding / estrategia</option>
-          <option>Diseño gráfico</option>
-          <option>Desarrollo web</option>
-          <option>Gestión de redes</option>
-          <option>Producción audiovisual</option>
-          <option>Consultoría</option>
-        </select>
+  <label class="fl fl-select">
+    <select name="Motivo" required>
+      <option value="" disabled selected></option>
+      <option>Branding / estrategia</option>
+      <option>Diseño gráfico</option>
+      <option>Desarrollo web</option>
+      <option>Gestión de redes</option>
+      <option>Producción audiovisual</option>
+      <option>Consultoría</option>
+    </select>
 
-        <span>Seleccioná un tema</span>
+    <span>Seleccioná un tema</span>
 
-        <svg class="caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
-        </svg>
-      </label>
+    <svg class="caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </label>
 
-      <label class="fl">
-        <textarea name="Mensaje" rows="4" placeholder=" "></textarea>
-        <span>Contanos un poco más</span>
-      </label>
+  <label class="fl">
+    <textarea name="Mensaje" rows="4" placeholder=" "></textarea>
+    <span>Contanos un poco más</span>
+  </label>
 
-      <button type="submit" class="btn-contacto btn-contacto--flat">Hablemos</button>
-    </form>
-  </div>
-</section>
+  <button type="submit" class="btn-contacto btn-contacto--flat">Hablemos</button>
+</form>
+
 
   <!-- ==================== FOOTER ==================== -->
   <footer id="footer" class="site-footer" role="contentinfo">

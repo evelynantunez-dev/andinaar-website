@@ -885,6 +885,23 @@ header.scrolled {
   .ico-medialuna{ bottom: -18px; right: -18px; }
   .ico-bandera{ bottom: -14px; left: -14px; }
 }
+/* ==================== TEAM HOVER: zoom + tilt premium ==================== */
+
+.team-card {
+  transition: transform .28s ease, filter .28s ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Base: solo zoom + leve inclinación */
+.team-card:hover {
+  transform: scale(1.035) rotate(-1deg);
+}
+
+/* Variación sutil por card (para que no sea todo igual) */
+.team-card:nth-child(2):hover { transform: scale(1.035) rotate(1deg); }
+.team-card:nth-child(3):hover { transform: scale(1.035) rotate(-.6deg); }
+.team-card:nth-child(4):hover { transform: scale(1.035) rotate(.6deg); }
 
 
 /* ==================== PORTFOLIO ==================== */
@@ -1023,7 +1040,6 @@ header.scrolled {
   align-items: start
 }
 
-/* ✅ limpiado: se quita font-family; em también lo define el sistema global */
 .contacto__copy h2 {
   font-size: clamp(1.9rem, 3.4vw, 2.4rem);
   line-height: 1.1;
@@ -1401,3 +1417,114 @@ h4 em,
   }
 }
 
+/* ==================== ABOUT: ocultar iconos en mobile ==================== */
+@media (max-width: 768px) {
+  .team-icon {
+    display: none !important;
+  }
+}
+
+/* ==================== MODALES (Legal / Cookies) ==================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+}
+
+.modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(920px, calc(100% - 2rem));
+  max-height: min(78vh, 820px);
+  margin: 10vh auto 0;
+  background: #fff;
+  color: var(--oscuro);
+  border-radius: 18px;
+  box-shadow: 0 22px 70px rgba(0,0,0,.28);
+  overflow: auto;
+  padding: clamp(1rem, 2.2vw, 1.4rem);
+}
+
+.modal__close {
+  position: sticky;
+  top: 0;
+  float: right;
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  line-height: 1;
+  padding: .4rem .5rem;
+  cursor: pointer;
+  color: var(--oscuro);
+  opacity: .75;
+}
+
+.modal__close:hover { opacity: 1; }
+
+.modal__title {
+  margin: .2rem 0 1rem;
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+  letter-spacing: .2px;
+}
+
+.modal__content p,
+.modal__content li {
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
+.modal__content h4 {
+  margin: 1.05rem 0 .45rem;
+  font-size: 1rem;
+}
+
+.modal__content ul {
+  padding-left: 1.1rem;
+  margin: .35rem 0 .8rem;
+}
+
+.modal__note {
+  margin-top: 1rem;
+  opacity: .8;
+}
+
+.modal__actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: .75rem;
+}
+
+.modal__btn {
+  padding: .75rem 1.1rem;
+  border-radius: 999px;
+}
+
+/* Animación suave */
+.modal.is-open .modal__panel {
+  animation: modal-in .22s ease-out both;
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(10px) scale(.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Mobile */
+@media (max-width: 520px){
+  .modal__panel {
+    margin: 7vh auto 0;
+    max-height: 82vh;
+  }
+}

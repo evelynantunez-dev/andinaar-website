@@ -395,60 +395,75 @@
     </div>
   </section>
 
-  <!-- ==================== CONTACTO ==================== -->
-  <section id="contacto" class="contacto" aria-labelledby="ttl-contacto">
-    <div class="contacto__wrap">
-      <div class="contacto__copy">
-        <h2 id="ttl-contacto">Queremos <em>escucharte</em></h2>
-        <p>
-          Si tenés un proyecto, una idea o simplemente querés saber cómo podemos ayudarte, escribinos.
-          <strong>Nos encanta construir desde el diálogo y encontrar soluciones que hagan crecer a las marcas con identidad.</strong>
-        </p>
-      </div>
-
-      <form class="contacto__card contacto--float" action="mailto:matiasperalta@andinaar.com" method="post" enctype="text/plain" target="_blank" novalidate>
-        <label class="fl">
-          <input type="text" name="Nombre" placeholder=" " required>
-          <span>Nombre y apellido</span>
-        </label>
-
-        <label class="fl">
-          <input type="email" name="Email" placeholder=" " required>
-          <span>Email</span>
-        </label>
-
-        <label class="fl">
-          <input type="tel" name="Telefono" placeholder=" ">
-          <span>Teléfono</span>
-        </label>
-
-        <label class="fl fl-select">
-          <select name="Motivo" required>
-            <option value="" disabled selected></option>
-            <option>Branding / estrategia</option>
-            <option>Diseño gráfico</option>
-            <option>Desarrollo web</option>
-            <option>Gestión de redes</option>
-            <option>Producción audiovisual</option>
-            <option>Consultoría / acompañamiento</option>
-          </select>
-
-          <span>Seleccioná un tema</span>
-
-          <svg class="caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </label>
-
-        <label class="fl">
-          <textarea name="Mensaje" rows="4" placeholder=" "></textarea>
-          <span>Contanos un poco más</span>
-        </label>
-
-        <button type="submit" class="btn-contacto btn-contacto--flat">Hablemos</button>
-      </form>
+ <!-- ==================== CONTACTO ==================== -->
+<section id="contacto" class="contacto" aria-labelledby="ttl-contacto">
+  <div class="contacto__wrap">
+    <div class="contacto__copy">
+      <h2 id="ttl-contacto">Queremos <em>escucharte</em></h2>
+      <p>
+        Si tenés un proyecto, una idea o simplemente querés saber cómo podemos ayudarte, escribinos.
+        <strong>Nos encanta construir desde el diálogo y encontrar soluciones que hagan crecer a las marcas con identidad.</strong>
+      </p>
     </div>
-  </section>
+
+    <form
+      class="contacto__card contacto--float"
+      name="contacto-andina"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="empresa"
+      novalidate
+    >
+      <!-- Netlify necesita esto para identificar el form -->
+      <input type="hidden" name="form-name" value="contacto-andina">
+
+      <!-- Honeypot anti-spam (no se ve, no lo completes) -->
+      <p style="display:none">
+        <label>Empresa <input name="empresa"></label>
+      </p>
+
+      <label class="fl">
+        <input type="text" name="Nombre" placeholder=" " required>
+        <span>Nombre y apellido</span>
+      </label>
+
+      <label class="fl">
+        <input type="email" name="Email" placeholder=" " required>
+        <span>Email</span>
+      </label>
+
+      <label class="fl">
+        <input type="tel" name="Telefono" placeholder=" ">
+        <span>Teléfono</span>
+      </label>
+
+      <label class="fl fl-select">
+        <select name="Motivo" required>
+          <option value="" disabled selected></option>
+          <option>Branding / estrategia</option>
+          <option>Diseño gráfico</option>
+          <option>Desarrollo web</option>
+          <option>Gestión de redes</option>
+          <option>Producción audiovisual</option>
+          <option>Consultoría / acompañamiento</option>
+        </select>
+
+        <span>Seleccioná un tema</span>
+
+        <svg class="caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </label>
+
+      <label class="fl">
+        <textarea name="Mensaje" rows="4" placeholder=" "></textarea>
+        <span>Contanos un poco más</span>
+      </label>
+
+      <button type="submit" class="btn-contacto btn-contacto--flat">Hablemos</button>
+    </form>
+  </div>
+</section>
 
   <!-- ==================== FOOTER ==================== -->
   <footer id="footer" class="site-footer" role="contentinfo">
@@ -485,14 +500,98 @@
       <div class="footer-bottom">
         <p class="footer-copy">
           © 2025 Andina, todos los derechos reservados <span class="dot">|</span>
-          <a href="#">Aviso legal</a> <span class="dot">|</span>
-          <a href="#">Política de cookies</a>
+          <a href="#" class="js-open-modal" data-modal="modal-legal">Aviso legal</a> <span class="dot">|</span>
+          <a href="#" class="js-open-modal" data-modal="modal-cookies">Política de cookies</a>
         </p>
         <p class="footer-madeby">By Andina Agencia Creativa</p>
       </div>
     </div>
   </footer>
 
+  <!-- ==================== MODAL: AVISO LEGAL ==================== -->
+  <div class="modal" id="modal-legal" role="dialog" aria-modal="true" aria-labelledby="modal-legal-title" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+
+    <div class="modal__panel" role="document" tabindex="-1">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close="true">✕</button>
+
+      <h3 id="modal-legal-title" class="modal__title">Aviso legal</h3>
+
+      <div class="modal__content">
+        <p><strong>Andina Agencia Creativa</strong> (en adelante, “Andina”) pone a disposición este sitio web con fines informativos y comerciales para presentar servicios creativos, branding, diseño, contenido y comunicación.</p>
+
+        <h4>1. Identificación del responsable</h4>
+        <p>Este sitio es administrado por Andina. Para consultas, podés escribir a <a href="mailto:matiasperalta@andinaar.com">matiasperalta@andinaar.com</a>.</p>
+
+        <h4>2. Uso del sitio</h4>
+        <p>Al navegar este sitio aceptás utilizarlo de forma lícita y respetuosa. No está permitido afectar su disponibilidad, intentar vulnerar su seguridad, ni usarlo para fines ilegales o dañinos.</p>
+
+        <h4>3. Propiedad intelectual</h4>
+        <p>Los contenidos del sitio (textos, diseños, identidad visual, piezas gráficas, imágenes, videos, marca y recursos) pertenecen a Andina o se utilizan con autorización. Queda prohibida su reproducción, distribución o modificación sin permiso expreso.</p>
+
+        <h4>4. Material de trabajos y portfolio</h4>
+        <p>Algunas piezas pueden exhibirse como muestra de trabajos realizados. Si sos titular de derechos y necesitás solicitar una corrección o baja, escribinos y lo revisamos.</p>
+
+        <h4>5. Enlaces a terceros</h4>
+        <p>El sitio puede incluir enlaces a plataformas externas (por ejemplo, Instagram o Behance). Andina no controla ni es responsable por contenidos, políticas o prácticas de sitios de terceros.</p>
+
+        <h4>6. Responsabilidad</h4>
+        <p>Andina procura mantener la información actualizada y correcta, pero no garantiza que el contenido esté libre de errores o que el servicio sea ininterrumpido. El uso de la información es responsabilidad del usuario.</p>
+
+        <h4>7. Cambios</h4>
+        <p>Podemos actualizar este aviso legal para reflejar mejoras del sitio o cambios operativos. Te recomendamos revisarlo periódicamente.</p>
+
+        <p class="modal__note"><em>Última actualización: 2025.</em></p>
+      </div>
+
+      <div class="modal__actions">
+        <button class="btn btn-primary modal__btn" type="button" data-close="true">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: POLÍTICA DE COOKIES ==================== -->
+  <div class="modal" id="modal-cookies" role="dialog" aria-modal="true" aria-labelledby="modal-cookies-title" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+
+    <div class="modal__panel" role="document" tabindex="-1">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close="true">✕</button>
+
+      <h3 id="modal-cookies-title" class="modal__title">Política de cookies</h3>
+
+      <div class="modal__content">
+        <p>En <strong>Andina</strong> usamos cookies y tecnologías similares para mejorar la experiencia de navegación, entender el uso del sitio y optimizar contenidos.</p>
+
+        <h4>1. ¿Qué son las cookies?</h4>
+        <p>Son pequeños archivos que se guardan en tu dispositivo cuando navegás por un sitio web. Permiten recordar preferencias y recopilar información técnica o estadística.</p>
+
+        <h4>2. ¿Qué tipos de cookies podemos usar?</h4>
+        <ul>
+          <li><strong>Necesarias:</strong> permiten el funcionamiento básico del sitio.</li>
+          <li><strong>Preferencias:</strong> guardan elecciones como idioma o configuraciones de visualización.</li>
+          <li><strong>Analíticas/medición:</strong> ayudan a conocer qué secciones se visitan más y cómo mejorar el contenido.</li>
+          <li><strong>Marketing (si aplica):</strong> podrían usarse para medir campañas o mostrar contenido relevante.</li>
+        </ul>
+
+        <h4>3. Cookies de terceros</h4>
+        <p>Algunas integraciones (por ejemplo, redes sociales o herramientas de analítica) pueden colocar cookies propias. Estas cookies se rigen por las políticas de sus respectivos proveedores.</p>
+
+        <h4>4. ¿Cómo gestionar o desactivar cookies?</h4>
+        <p>Podés configurar tu navegador para bloquear o eliminar cookies. Tené en cuenta que, si desactivás cookies necesarias, algunas funcionalidades podrían no funcionar correctamente.</p>
+
+        <h4>5. Cambios</h4>
+        <p>Podemos actualizar esta política para reflejar cambios en el sitio o en herramientas utilizadas.</p>
+
+        <p class="modal__note"><em>Última actualización: 2025.</em></p>
+      </div>
+
+      <div class="modal__actions">
+        <button class="btn btn-primary modal__btn" type="button" data-close="true">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  
   <!-- ==================== SCRIPTS ==================== -->
   <script>
     // Header sólido al hacer scroll
@@ -572,6 +671,60 @@
       }, { threshold: 0.15 });
 
       els.forEach(el => io.observe(el));
+    })();
+
+    // Modales: Aviso legal + Cookies
+    (function () {
+      const openers = document.querySelectorAll('.js-open-modal');
+      const modals = document.querySelectorAll('.modal');
+      let lastFocus = null;
+
+      function openModal(modal) {
+        if (!modal) return;
+        lastFocus = document.activeElement;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        const panel = modal.querySelector('.modal__panel');
+        if (panel) panel.focus({ preventScroll: true });
+      }
+
+      function closeModal(modal) {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+
+        if (lastFocus && typeof lastFocus.focus === 'function') {
+          lastFocus.focus({ preventScroll: true });
+        }
+      }
+
+      // Abrir
+      openers.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const id = btn.getAttribute('data-modal');
+          openModal(document.getElementById(id));
+        });
+      });
+
+      // Cerrar por click en backdrop o botones con data-close
+      modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+          if (e.target && e.target.getAttribute('data-close') === 'true') {
+            closeModal(modal);
+          }
+        });
+      });
+
+      // Cerrar con ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        const opened = document.querySelector('.modal.is-open');
+        if (opened) closeModal(opened);
+      });
     })();
   </script>
 </body>

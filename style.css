@@ -215,41 +215,58 @@ header.scrolled {
 /* ==================== HERO ==================== */
 .hero {
   height: 100vh;
-  background: url('andina-header.jpg') no-repeat center/cover;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
+  overflow: hidden;
 
   /* un pelín de aire bajo el header */
   padding-top: clamp(6px, 1.5vw, 14px);
 }
 
-.hero::before {
-  content: "";
+/* VIDEO FONDO */
+.hero-video {
   position: absolute;
   inset: 0;
-  background: rgba(8, 38, 44, .055);
-  z-index: 1
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
+/* OVERLAY (el que ya tenías) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.30)
+  );
+  z-index: 1;
+}
+
+
+/* CONTENIDO */
 .hero-content {
   position: relative;
-  z-index: 2
+  z-index: 2;
 }
 
+/* LOGO */
 .hero-logo {
   width: 750px;
   max-width: 80%;
   height: auto;
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, .4));
-  animation: fadeIn .9s ease-out
+  animation: fadeIn .9s ease-out;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(.96) }
-  to { opacity: 1; transform: scale(1) }
+  to   { opacity: 1; transform: scale(1) }
 }
 
 /* ==================== BANNER AZUL ==================== */

@@ -1,4 +1,4 @@
-/* ==================== VARIABLES (igual estética Andina) ==================== */
+/* ==================== VARIABLES ==================== */
 :root{
   --claro: #FFFFF3;
   --oscuro: #08262C;
@@ -26,12 +26,10 @@ body{
   display: grid;
   place-items: center;
   padding: 2.2rem 1.25rem;
-
-  /* Fondo */
   background: url("andina-header.jpg") center/cover no-repeat;
 }
 
-/* Overlay negro con opacidad */
+/* Overlay */
 .ty__overlay{
   position:absolute;
   inset:0;
@@ -39,13 +37,30 @@ body{
   pointer-events:none;
 }
 
-/* Card */
+/* ==================== LOGO FLOTANTE ==================== */
+.ty__logo-link{
+  position: absolute;
+  top: clamp(1.6rem, 4vw, 2.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.ty__logo-float{
+  height: 64px;
+  width: auto;
+  opacity: .92;
+  filter: drop-shadow(0 14px 34px rgba(0,0,0,.45));
+}
+
+/* ==================== CARD ==================== */
 .ty__card{
   position: relative;
   z-index: 1;
   width: min(640px, 92vw);
   text-align: center;
   padding: clamp(1.4rem, 3.2vw, 2.2rem);
+  margin-top: clamp(3.8rem, 8vw, 5.5rem);
   border-radius: 14px;
   background: rgba(0, 28, 34, .45);
   box-shadow: 0 22px 70px rgba(0,0,0,.45);
@@ -54,16 +69,7 @@ body{
   border: 1px solid rgba(255,255,255,.10);
 }
 
-/* Logo */
-.ty__logo{
-  display:block;
-  margin: 0 auto .9rem;
-  height: 70px;
-  width: auto;
-  filter: drop-shadow(0 12px 30px rgba(0,0,0,.35));
-}
-
-/* Título — ✅ Coranto 2 Bold */
+/* ==================== TÍTULO ==================== */
 .ty__title{
   font-family: "Coranto 2", serif;
   font-weight: 700;
@@ -72,7 +78,7 @@ body{
   margin-bottom: .75rem;
 }
 
-/* Texto (2 líneas) — ✅ Instrument Sans Regular */
+/* ==================== TEXTO ==================== */
 .ty__text{
   font-family: "Instrument Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 400;
@@ -80,14 +86,10 @@ body{
   line-height: 1.65;
   opacity: .95;
   margin: 0 auto 1.25rem;
-  max-width: 52ch;
+  max-width: 54ch;
 }
 
-.ty__text span{
-  display:block;
-}
-
-/* Botón */
+/* ==================== BOTÓN ==================== */
 .ty__btn{
   display: inline-block;
   text-decoration: none;
@@ -107,7 +109,7 @@ body{
   box-shadow: 0 16px 34px rgba(0,0,0,.28);
 }
 
-/* Social debajo del botón */
+/* ==================== SOCIAL ==================== */
 .ty__social{
   margin-top: 1.05rem;
   display:flex;
@@ -138,7 +140,7 @@ body{
   height: 22px;
 }
 
-/* Accesibilidad */
+/* ==================== ACCESIBILIDAD ==================== */
 a:focus-visible{
   outline: 2px dashed var(--amarillo);
   outline-offset: 4px;

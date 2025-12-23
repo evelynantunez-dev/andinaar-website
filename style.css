@@ -766,22 +766,54 @@ header.scrolled {
   background: url("textura-nosotros.png") center/cover no-repeat;
   opacity: .5;
   pointer-events: none;
-  z-index: 0; /* ✅ la textura queda arriba del blanco pero debajo del contenido */
+  z-index: 0;
 }
 
+/* Contenedor principal */
 .about__wrap{
   position: relative;
-  z-index: 1; /* ✅ contenido arriba de la textura */
+  z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
+  gap: clamp(2rem, 4.5vw, 3.5rem);
   align-items: center;
 }
 
-/* ==================== TEAM GRID (2x2) ==================== */
+/* ==================== TEXTO ==================== */
+.about__right{
+  max-width: 560px;
+  position: relative;
+}
 
+.about__title{
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 1.4rem;
+  color: #0F2E35;
+}
+
+/* Párrafos */
+.about__p{
+  font-family: "Coranto 2", serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2a3d41;
+  margin-bottom: 1.4rem;
+}
+
+/* 👉 Salto de jerarquía entre los dos bloques principales */
+.about__p:first-of-type{
+  margin-bottom: 2.4rem;   /* aire visual */
+}
+
+/* CTA */
+.about__cta{
+  margin-top: 1.8rem;
+}
+
+/* ==================== TEAM GRID ==================== */
 .team-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -790,6 +822,23 @@ header.scrolled {
   width: 100%;
 }
 
+/* Card */
+.team-card{
+  position: relative;
+  transition: transform .28s ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Hover general */
+.team-card:hover{
+  transform: scale(1.035) rotate(-1deg);
+}
+.team-card:nth-child(2):hover{ transform: scale(1.035) rotate(1deg); }
+.team-card:nth-child(3):hover{ transform: scale(1.035) rotate(-.6deg); }
+.team-card:nth-child(4):hover{ transform: scale(1.035) rotate(.6deg); }
+
+/* Contenedor imagen */
 .team-item{
   position: relative;
   border-radius: 14px;
@@ -804,13 +853,13 @@ header.scrolled {
   height: auto;
 }
 
-/* Blanco y negro visible por defecto */
+/* Blanco y negro */
 .team-img.byn{
   filter: grayscale(100%);
-  transition: opacity .25s ease, filter .25s ease;
+  transition: opacity .25s ease;
 }
 
-/* Color oculto */
+/* Color */
 .team-img.color{
   position: absolute;
   inset: 0;
@@ -818,90 +867,79 @@ header.scrolled {
   transition: opacity .25s ease;
 }
 
-/* Hover */
-.team-item:hover .team-img.byn{
-  opacity: 0;
-}
+/* Hover imagen */
+.team-item:hover .team-img.byn{ opacity: 0; }
+.team-item:hover .team-img.color{ opacity: 1; }
 
-.team-item:hover .team-img.color{
-  opacity: 1;
-}
-
-/* Responsive */
-@media (max-width: 980px){
-  .team-grid{
-    max-width: 520px;
-  }
-}
-
-@media (max-width: 520px){
-  .team-grid{
-    grid-template-columns: 1fr 1fr;
-    gap: .85rem;
-  }
-}
-
-/* Íconos decorativos sobre las fotos */
-.team-item{
-  position: relative; /* ya lo tenés, pero lo dejo por las dudas */
-}
-
+/* ==================== ICONOS DECORATIVOS ==================== */
 .team-icon{
   position: absolute;
-  z-index: 5;             /* arriba de las imágenes */
+  z-index: 5;
   pointer-events: none;
   user-select: none;
   width: clamp(70px, 9vw, 130px);
-  height: auto;
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.14));
 }
 
-/* Escarapela: arriba de Vir (esquina superior izquierda) */
+/* Escarapela */
 .ico-escarapela{
   top: -26px;
   left: -26px;
 }
 
-/* Medialuna: por abajo de la foto de Male, esquina superior derecha (queda “colgando” abajo) */
-.ico-medialuna{
-  bottom: -28px;
-  right: -26px;
-  width: clamp(70px, 8.5vw, 125px);
-}
-
-/* Bandera: esquina inferior izquierda sobre la foto de Mati */
+/* Bandera */
 .ico-bandera{
   bottom: -18px;
   left: -22px;
   width: clamp(90px, 10vw, 150px);
 }
 
-/* Ajuste mobile para que no tapen tanto */
-@media (max-width: 520px){
-  .team-icon{
-    width: clamp(58px, 18vw, 90px);
+.team-card--male{
+  position: relative;
+}
+
+/* Medialuna decorativa */
+.about__medialuna{
+  position: absolute;
+  right: -90px;     /* la aleja del texto */
+  bottom: 12px;     /* alineada al botón */
+
+  width: clamp(80px, 10vw, 140px);
+  pointer-events: none;
+  user-select: none;
+
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.14));
+}
+
+/* Blindaje general por si otro icono hereda transform */
+.team-card:hover .team-icon{
+  transform: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 980px){
+  .team-grid{ max-width: 520px; }
+}
+
+@media (max-width: 768px){
+  .about__wrap{
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .ico-escarapela{ top: -18px; left: -18px; }
-  .ico-medialuna{ bottom: -18px; right: -18px; }
-  .ico-bandera{ bottom: -14px; left: -14px; }
-}
-/* ==================== TEAM HOVER: zoom + tilt premium ==================== */
 
-.team-card {
-  transition: transform .28s ease, filter .28s ease;
-  transform-origin: center;
-  will-change: transform;
+  .about__right{
+    max-width: 100%;
+  }
+
+  .team-icon{ display: none !important; }
 }
 
-/* Base: solo zoom + leve inclinación */
-.team-card:hover {
-  transform: scale(1.035) rotate(-1deg);
+@media (max-width: 520px){
+  .team-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: .85rem;
+  }
 }
-
-/* Variación sutil por card (para que no sea todo igual) */
-.team-card:nth-child(2):hover { transform: scale(1.035) rotate(1deg); }
-.team-card:nth-child(3):hover { transform: scale(1.035) rotate(-.6deg); }
-.team-card:nth-child(4):hover { transform: scale(1.035) rotate(.6deg); }
 
 
 /* ==================== PORTFOLIO ==================== */
@@ -1391,6 +1429,8 @@ h4 em,
 
   /* Orden: texto primero, fotos después */
   .about__right{ order: 1; }
+
+  
   .about__left{ order: 2; }
 
   /* Texto a ancho completo */
@@ -1529,5 +1569,11 @@ h4 em,
   .modal__panel {
     margin: 7vh auto 0;
     max-height: 82vh;
+  }
+}
+/* ==================== OCULTAR MEDIALUNA EN RESPONSIVE ==================== */
+@media (max-width: 768px){
+  .about__medialuna{
+    display: none !important;
   }
 }

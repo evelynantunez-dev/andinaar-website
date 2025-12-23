@@ -1190,100 +1190,103 @@ header.scrolled {
   .btn-contacto.btn-contacto--flat { width: 100% }
 }
 
-/* ==================== FOOTER ==================== */
-.site-footer {
+/* ==================== FOOTER (FULL WIDTH REAL) ==================== */
+.site-footer{
   background: var(--azul);
   color: var(--crema);
-  padding: 3.25rem 1.25rem 1.5rem
+
+  /* Full width incluso si algún wrapper lo encierra */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
-.site-footer .footer-inner {
+.site-footer .footer-inner{
   max-width: 1100px;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
+  padding: 4rem 1.25rem 1.75rem;
 }
 
-.footer-logo {
+.footer-logo{
   display: block;
-  margin: 0 auto .35rem;
+  margin: 0 auto 1.5rem;
   height: 78px;
   width: auto;
-  margin-bottom: 5%;
-  filter: drop-shadow(0 0 0 transparent);
-  align-content: center
 }
 
-.footer-social {
+.footer-social{
   list-style: none;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   justify-content: center;
-  margin: 1.15rem 0 1.4rem;
-  padding: 0
+  margin: 0 0 1.6rem;
+  padding: 0;
 }
 
-.footer-social a {
+.footer-social a{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.08);
+  transition: background .2s ease, transform .15s ease;
 }
 
-.footer-social img {
-  display: block;
-  max-width: 22px;
-  max-height: 22px;
-  width: auto;
-  height: auto
+.footer-social a:hover{
+  background: rgba(255,255,255,.14);
+  transform: translateY(-1px);
 }
 
-.footer-sep {
+.footer-social img{
+  width: 20px;
+  height: 20px;
+}
+
+.footer-sep{
   border: 0;
-  border-top: 1px solid rgb(255, 255, 255);
-  margin: .75rem auto 0;
-  max-width: 100%
+  border-top: 1px solid rgba(255,255,255,.25);
+  margin: 1.2rem auto;
+  max-width: 100%;
 }
 
-.footer-bottom {
-  margin-top: .6rem;
+.footer-bottom{
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   font-size: .82rem;
-  color: rgba(255, 255, 243, .85)
+  color: rgba(255,255,243,.85);
 }
 
-.footer-bottom a {
+.footer-bottom a{
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid transparent
+  border-bottom: 1px solid transparent;
 }
 
-.footer-bottom a:hover { border-bottom-color: currentColor }
+.footer-bottom a:hover{
+  border-bottom-color: currentColor;
+}
 
-.footer-bottom .dot {
+.footer-bottom .dot{
+  margin: 0 .35rem;
   opacity: .6;
-  margin: 0 .35rem
 }
 
-@media (max-width: 700px) {
-  .footer-bottom {
+@media (max-width: 700px){
+  .footer-bottom{
     flex-direction: column;
     text-align: center;
-    gap: .4rem
+    gap: .5rem;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important }
-}
-
-@media (max-width: 768px) {
-  .banner-montana { display: none !important }
-}
 
 /* =====================================================
    SISTEMA TIPOGRÁFICO GLOBAL — ANDINA (REGLA GENERAL)

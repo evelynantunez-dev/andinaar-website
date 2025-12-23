@@ -1577,3 +1577,11 @@ h4 em,
     display: none !important;
   }
 }
+
+/* ==================== OCULTAR DECORACIONES EN RESPONSIVE ==================== */
+@media (max-width: 768px){
+  .banner-montana,
+  #servicios2 .s2-mont{
+    display: none !important;
+  }
+}

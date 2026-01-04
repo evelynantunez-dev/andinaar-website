@@ -236,7 +236,7 @@ header.scrolled {
   z-index: 0;
 }
 
-/* OVERLAY (el que ya tenías) */
+/* OVERLAY */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -270,6 +270,7 @@ header.scrolled {
 }
 
 /* ==================== BANNER AZUL ==================== */
+
 .banner-azul {
   background: var(--azul);
   color: var(--claro);
@@ -300,7 +301,6 @@ header.scrolled {
   z-index: 1
 }
 
-/* ✅ limpiado: el sistema global define familias y pesos */
 .banner-text h3 {
   font-size: clamp(1.4rem, 2.2vw, 2.05rem);
   margin-bottom: .6rem
@@ -341,7 +341,6 @@ header.scrolled {
   text-align: center
 }
 
-/* ✅ limpiado: se quita font-family para que mande la regla global */
 .content h2 {
   font-size: clamp(2rem, 3.5vw, 2.7rem);
   margin-bottom: 1.5rem;
@@ -411,7 +410,6 @@ header.scrolled {
   background: transparent
 }
 
-/* ✅ limpiado: se quita peso para que mande regla global de títulos */
 .srv-head h2 {
   font-size: clamp(2rem, 4.5vw, 3rem);
   color: #32686F;
@@ -500,13 +498,12 @@ header.scrolled {
 
 /* ==================== SERVICIOS – PARTE 2 ==================== */
 #servicios2.servicios {
-  background: var(--azul); /* fondo oscuro */
+  background: var(--azul); 
   color: var(--claro);
 }
 
 #servicios2 .srv-head h2 { color: #82C5C0; }
 
-/* ✅ limpiado: font-style/weight lo maneja sistema global */
 #servicios2 .srv-head .srv-mark {
   color: #82C5C0;
 }
@@ -565,28 +562,23 @@ header.scrolled {
 @media (max-width: 620px) {
   .s2-grid { grid-template-columns: 1fr }
 
-  /* ocultar Argentina en responsive */
   .s2-arg { display: none !important; }
 
-  /* opcional: bajar un pelo la montaña */
   .s2-mont { bottom: -4px; }
 }
 
-/* === Estilo dark solo dentro de #servicios2 === */
 #servicios2.servicios {
   background: var(--azul);
   color: #82C5C0;
 }
 
-/* Título y marcado italic */
 #servicios2 .srv-head h2 { color: #82C5C0; }
 
-/* ✅ limpiado: font-style/weight lo maneja sistema global */
 #servicios2 .srv-head .srv-mark {
   color: #82C5C0;
 }
 
-/* --------- Íconos estilo “post-it” --------- */
+/* --------- Íconos --------- */
 #servicios2 .srv-card {
   position: relative;
   background: rgba(255, 255, 255, .06);
@@ -602,7 +594,7 @@ header.scrolled {
   box-shadow: 0 10px 24px rgba(0, 0, 0, .24), inset 0 1px 0 rgba(255, 255, 255, .04);
 }
 
-/* Bloquecito claro con SVG adentro, a la izquierda del título */
+
 #servicios2 .srv-ico {
   width: 44px;
   height: 44px;
@@ -648,27 +640,26 @@ header.scrolled {
   opacity: .95;
 }
 
-/* Argentina pegada al borde superior izquierdo */
 #servicios2 .s2-arg {
-  top: -18px; /* la “pega” al borde como en el diseño */
+  top: -18px; 
   left: 0;
   width: clamp(120px, 12vw, 220px);
 }
 
-/* Montañas + bandera grandes abajo (centradas) */
+/* Montañas + bandera centradas */
 #servicios2 .s2-mont {
   width: clamp(200px, 50vw, 400px);
 }
 
-/* Grid responsive (respetando tu base) */
+/* Grid responsive */
 @media (max-width: 1024px) {
   #servicios2 .srv-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
   #servicios2 .srv-grid { grid-template-columns: 1fr; }
-  #servicios2 .s2-arg { display: none !important; } /* ocultar Argentina en mobile */
-  #servicios2 .s2-mont { bottom: -6px; width: 115%; } /* un poco más ancha en mobile */
+  #servicios2 .s2-arg { display: none !important; } 
+  #servicios2 .s2-mont { bottom: -6px; width: 115%; } 
 }
 
 /* ==================== RESPONSIVE NAV (mobile) ==================== */
@@ -749,7 +740,7 @@ header.scrolled {
   .srv-churros, .srv-mates { display: none }
 }
 
-/* ==================== SOBRE NOSOTROS (2 columnas) ==================== */
+/* ==================== SOBRE NOSOTROS =================== */
 .about{
   position: relative;
   background: #fff;
@@ -803,9 +794,9 @@ header.scrolled {
   margin-bottom: 1.4rem;
 }
 
-/* 👉 Salto de jerarquía entre los dos bloques principales */
+
 .about__p:first-of-type{
-  margin-bottom: 2.4rem;   /* aire visual */
+  margin-bottom: 2.4rem;  
 }
 
 /* CTA */
@@ -901,8 +892,8 @@ header.scrolled {
 /* Medialuna decorativa */
 .about__medialuna{
   position: absolute;
-  right: -90px;     /* la aleja del texto */
-  bottom: 12px;     /* alineada al botón */
+  right: -90px;    
+  bottom: 12px;    
 
   width: clamp(80px, 10vw, 140px);
   pointer-events: none;
@@ -911,7 +902,7 @@ header.scrolled {
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.14));
 }
 
-/* Blindaje general por si otro icono hereda transform */
+
 .team-card:hover .team-icon{
   transform: none;
 }
@@ -1106,7 +1097,7 @@ header.scrolled {
   gap: 14px
 }
 
-/* Labels flotantes */
+/* Labels  */
 .contacto--float .fl {
   position: relative;
   display: block;
@@ -1228,12 +1219,11 @@ header.scrolled {
   .btn-contacto.btn-contacto--flat { width: 100% }
 }
 
-/* ==================== FOOTER (FULL WIDTH REAL) ==================== */
+/* ==================== FOOTER ==================== */
 .site-footer{
   background: var(--azul);
   color: var(--crema);
 
-  /* Full width incluso si algún wrapper lo encierra */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -1328,7 +1318,6 @@ header.scrolled {
 
 /* =====================================================
    SISTEMA TIPOGRÁFICO GLOBAL — ANDINA (REGLA GENERAL)
-   Pegado al final para que pise todo lo anterior.
    ===================================================== */
 
 /* BASE */
@@ -1379,7 +1368,7 @@ h4 em,
   font-style: italic;
 }
 
-/* Título About (volver a hacerlo protagonista) */
+/* About  */
 .about__title{
   font-size: clamp(1.9rem, 3.2vw, 2.6rem);
   line-height: 1.1;
@@ -1387,9 +1376,8 @@ h4 em,
   color: #0F2E35; /* o var(--oscuro) */
 }
 
-/* opcional: que el "Andina" (em) destaque más */
 .about__title em{
-  font-weight: 700; /* ya lo tenés global, esto es por si algo lo pisa */
+  font-weight: 700; 
 }
 
 
@@ -1427,7 +1415,6 @@ h4 em,
     align-items: start;
   }
 
-  /* Orden: texto primero, fotos después */
   .about__right{ order: 1; }
 
   
@@ -1436,7 +1423,7 @@ h4 em,
   /* Texto a ancho completo */
   .about__right{
     width: 100%;
-    text-align: left; /* si lo querés centrado, cambiá a center */
+    text-align: left; 
   }
 
   /* Grid de fotos a ancho completo */
@@ -1446,21 +1433,20 @@ h4 em,
     max-width: none !important;
   }
 
-  /* 2x2 en mobile (queda mucho mejor que 4 chiquitas) */
+  /* 2x2 mob */
   .team-grid{
     grid-template-columns: repeat(2, 1fr) !important;
     gap: .85rem !important;
   }
 }
 
-/* Opcional: en pantallas MUY chicas, 1 columna de fotos */
 @media (max-width: 420px){
   .team-grid{
     grid-template-columns: 1fr !important;
   }
 }
 
-/* ==================== ABOUT: ocultar iconos en mobile ==================== */
+/* ==================== ABOUT: ocultar iconos en mob ==================== */
 @media (max-width: 768px) {
   .team-icon {
     display: none !important;
@@ -1584,4 +1570,9 @@ h4 em,
   #servicios2 .s2-mont{
     display: none !important;
   }
+}
+
+.banner-azul .banner-text p{
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-weight: 400;
 }

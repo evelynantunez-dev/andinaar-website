@@ -932,8 +932,7 @@ header.scrolled {
   }
 }
 
-
-/* ==================== PORTFOLIO ==================== */
+/* ==================== PORTFOLIO (con miniaturas) ==================== */
 .portfolio {
   background: var(--azul);
   padding: clamp(3rem, 6vw, 5rem) 1.25rem;
@@ -952,40 +951,77 @@ header.scrolled {
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   font-weight: 200;
   margin: 0 0 1.75rem;
-  color: #82C5C0
+  color: #82C5C0;
 }
-
-
 
 .pf-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(14px, 2vw, 24px);
-  margin-bottom: clamp(2rem, 4vw, 3rem)
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
+
+/* Tarjeta */
 .pf-item {
   position: relative;
   display: block;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   border-radius: 6px;
-  background: rgba(255, 255, 255, .18);
   overflow: hidden;
   isolation: isolate;
   outline: 2px solid rgba(255, 255, 255, .06);
   outline-offset: -2px;
+  background: rgba(255, 255, 255, .18);
   transition: transform .25s ease, outline-color .25s ease, box-shadow .25s ease, filter .25s ease;
-  cursor: default
+  text-decoration: none;
 }
 
+/* Miniatura */
+.pf-thumb{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
+  filter: saturate(98%);
+  transition: transform .35s ease, filter .25s ease;
+}
+
+/* Sombra sutil encima de la imagen para legibilidad */
+.pf-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.08) 0%,
+    rgba(0,0,0,.20) 55%,
+    rgba(0,0,0,.45) 100%
+  );
+  opacity: .55;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Shimmer (tu efecto) */
 .pf-item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, .06) 35%, rgba(255, 255, 255, .14) 50%, rgba(255, 255, 255, .06) 65%, transparent 100%);
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, .06) 35%,
+    rgba(255, 255, 255, .14) 50%,
+    rgba(255, 255, 255, .06) 65%,
+    transparent 100%
+  );
   transform: translateX(-100%);
   animation: pfShimmer 2.8s ease-in-out infinite;
-  pointer-events: none
+  pointer-events: none;
+  z-index: 2;
 }
 
 @keyframes pfShimmer {
@@ -993,17 +1029,40 @@ header.scrolled {
   100% { transform: translateX(100%) }
 }
 
+/* Caption */
+.pf-cap{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+  color: rgba(255,255,243,.94);
+  font-size: .92rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: .1px;
+  text-shadow: 0 8px 18px rgba(0,0,0,.40);
+}
+
+/* Hover (mismo estilo + un poquito más "premium" con la miniatura) */
 .pf-item:hover,
 .pf-item:focus-visible {
   transform: translateY(-4px);
   outline-color: var(--celeste);
   box-shadow: 0 10px 28px rgba(0, 0, 0, .25);
-  filter: saturate(105%)
+  filter: saturate(105%);
+}
+
+.pf-item:hover .pf-thumb,
+.pf-item:focus-visible .pf-thumb{
+  transform: scale(1.06);
+  filter: saturate(112%);
 }
 
 .pf-item:hover::after,
-.pf-item:focus-visible::after { opacity: .25 }
+.pf-item:focus-visible::after { opacity: .25; }
 
+/* CTA Behance */
 .pf-cta {
   display: block;
   text-align: center;
@@ -1014,33 +1073,33 @@ header.scrolled {
   padding: .6rem 1rem;
   margin: 0 auto;
   width: auto;
-  max-width: 240px
+  max-width: 240px;
 }
 
 .pf-cta:hover {
   background: #2796a0;
-  transform: none
+  transform: none;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
-  .pf-grid { grid-template-columns: repeat(3, 1fr) }
+  .pf-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Mobile */
 @media (max-width: 680px) {
-  .pf-grid { grid-template-columns: repeat(2, 1fr) }
+  .pf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pf-cap {
+    font-size: .9rem;
+  }
 }
 
-/* reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity .5s ease, transform .5s ease
-}
 
-.reveal.in {
-  opacity: 1;
-  transform: none
-}
 
 /* ==================== CONTACTO ==================== */
 .contacto {

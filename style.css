@@ -222,8 +222,11 @@ header.scrolled {
   text-align: center;
   overflow: hidden;
 
-  /* un pelín de aire bajo el header */
+
   padding-top: clamp(6px, 1.5vw, 14px);
+
+  background: #08262C;
+
 }
 
 /* VIDEO FONDO */

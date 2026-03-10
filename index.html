@@ -8,6 +8,7 @@
   <!-- SEO básicos -->
   <link rel="canonical" href="https://andinaar.com/" />
   <meta name="description" content="Creatividad con raíz: diseño, branding, web y más. Construimos marcas con propósito." />
+
   <meta name="theme-color" content="#003945" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#001e24" media="(prefers-color-scheme: dark)">
 
@@ -35,7 +36,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/dcv1wfh.css">
 
   <!-- Preload imágenes -->
-  <link rel="preload" as="image" href="andina-header.jpg" imagesrcset="andina-header.jpg 1x, andina-header@2x.jpg 2x">
+  <link rel="preload" as="image" href="andina-header.jpg">
   <link rel="preload" as="image" href="andina1.png">
 
   <!-- CSS -->
@@ -43,9 +44,11 @@
 </head>
 
 <body>
+
   <!-- ==================== HEADER ==================== -->
   <header>
     <nav class="navbar" aria-label="Barra de navegación">
+
       <!-- LOGO -->
       <a href="#inicio" class="logo" aria-label="Andina - Ir al inicio">
         <img src="andina2.png" alt="Logo Andina" class="logo-img full-logo" loading="eager" decoding="sync">
@@ -60,7 +63,6 @@
           <li role="none"><a role="menuitem" href="#sobre">Sobre Nosotros</a></li>
           <li role="none"><a role="menuitem" href="#portfolio">Portfolio</a></li>
         </ul>
-
         <a href="#contacto" class="nav-contacto">Contacto</a>
       </div>
 
@@ -73,23 +75,10 @@
 
   <!-- ==================== HERO ==================== -->
   <section id="inicio" class="hero" aria-label="Portada">
-    <video class="hero-video"
-      src="landing.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto">
-    </video>
-
+    <video class="hero-video" src="landing.mp4" autoplay muted loop playsinline preload="auto"></video>
     <div class="hero-overlay"></div>
-
     <div class="hero-content">
-      <img src="andina1.png"
-        alt="Isologo Andina"
-        class="hero-logo"
-        loading="eager"
-        decoding="async">
+      <img src="andina1.png" alt="Isologo Andina" class="hero-logo" loading="eager" decoding="async">
     </div>
   </section>
 
@@ -97,12 +86,10 @@
   <section class="banner-azul" aria-label="Manifiesto">
     <div class="banner-wrap">
       <img src="banner-azul.png" alt="" class="sello-sol" loading="lazy" decoding="async" aria-hidden="true" width="160" height="160">
-
       <div class="banner-text">
         <h3>Creemos en la <em>creatividad con raíz:</em></h3>
         <p>Aquella que surge de lo local, de lo natural,<br> y se proyecta hacia lo más alto.</p>
       </div>
-
       <img src="montana-bann.png" alt="" class="banner-montana" loading="lazy" decoding="async" aria-hidden="true" width="200" height="120">
     </div>
   </section>
@@ -176,7 +163,68 @@
     </div>
   </section>
 
-  <!-- ==================== SERVICIOS – PARTE 2 ==================== -->
+
+
+  <!-- ==================== proyectos recientes ==================== -->
+  <section id="proyectos-recientes" class="prx" aria-labelledby="ttl-prx">
+    <div class="prx-intro">
+      <h2 id="ttl-prx" class="light"> Proyectos <em>recientes</em></h2>
+      <p>Procesos creativos que están marcando nuestro presente.</p>
+    </div>
+
+    <!-- ALASKA -->
+    <article class="prx-item" style="--frames: 2">
+      <div class="prx-gallery">
+        <div class="prx-sticky">
+          <div class="prx-text">
+            <span class="prx-number">01</span>
+            <h3>Alaska — Videoclip</h3>
+            <p>Grabación y edición integral de videoclip. Dirección visual, narrativa y postproducción.</p>
+            <a href="proyecto-alaska.html" class="btn btn-primary">Ver proceso</a>
+          </div>
+        </div>
+        <img src="alaska-1.png" alt="Videoclip Alaska escena 1" class="active">
+        <img src="alaska-2.png" alt="Videoclip Alaska escena 2">
+      </div>
+    </article>
+
+    <!-- KEVIN -->
+    <article class="prx-item" style="--frames: 2">
+      <div class="prx-gallery">
+        <div class="prx-sticky">
+          <div class="prx-text">
+            <span class="prx-number">02</span>
+            <h3>Kevin — Video Drone</h3>
+            <p>Producción y edición audiovisual con tomas aéreas. Enfoque cinematográfico y dinámico.</p>
+            <a href="proyecto-kevin.html" class="btn btn-primary">Ver proceso</a>
+          </div>
+        </div>
+        <img src="kevin-1.png" alt="Video drone Kevin toma 1" class="active">
+        <img src="kevin-2.png" alt="Video drone Kevin toma 2">
+      </div>
+    </article>
+
+    <!-- VERTECH -->
+    <article class="prx-item" style="--frames: 2">
+      <div class="prx-gallery">
+        <div class="prx-sticky">
+          <div class="prx-text">
+            <span class="prx-number">03</span>
+            <h3>Vertech — Packaging</h3>
+            <p>Diseño de packaging estratégico con enfoque industrial y técnico.</p>
+            <a href="proyecto-vertech.html" class="btn btn-primary">Ver proceso</a>
+          </div>
+        </div>
+        <img src="vertech-1.png" alt="Packaging Vertech vista 1" class="active">
+        <img src="vertech-2.png" alt="Packaging Vertech vista 2">
+      </div>
+    </article>
+  </section>
+
+
+
+
+  <!-- ==================== SERVICIOS – PARTE 2 
   <section id="servicios2" class="servicios" aria-labelledby="ttl-servicios2">
     <img src="argentina.png" alt="" class="srv-deco s2-arg" aria-hidden="true" loading="lazy" width="220" height="520">
     <img src="bandera-montanas.png" alt="" class="srv-deco s2-mont" aria-hidden="true" loading="lazy" width="1280" height="360">
@@ -191,6 +239,7 @@
       </header>
 
       <div class="srv-grid" role="list">
+
         <article class="srv-card" role="listitem">
           <div class="srv-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -272,13 +321,14 @@
           <h3>Análisis, Métricas &amp; Optimización</h3>
           <p>Medimos el rendimiento de campañas, interpretamos datos y ajustamos estrategias para mejorar cada resultado.</p>
         </article>
+
       </div>
 
       <div class="srv-cta">
         <a href="#contacto" class="btn btn-primary">¡Contactanos!</a>
       </div>
     </div>
-  </section>
+  </section> SERVICIOS PARTE 2 ==================== -->
 
   <!-- ==================== SOBRE NOSOTROS ==================== -->
   <section id="sobre" class="about" aria-labelledby="ttl-sobre">
@@ -326,76 +376,64 @@
           <strong>una agencia que crece con pasión, compromiso y una mirada honesta sobre el diseño y la comunicación.</strong>
         </p>
 
-
-
         <p class="about__p">
           Cada uno aporta su talento, su sensibilidad y su energía, y eso nos permite crear desde un lugar auténtico.
           Confiamos en nuestras ideas, en nuestra manera de trabajar y en la fuerza que tiene una visión cuando se construye en equipo.
         </p>
 
         <p class="about__p">
-          Por eso trabajamos todos los días: para demostrar que cuando hay raíz, convicción y pasión,
-          las marcas pueden crecer con identidad y propósito.
+          Por eso trabajamos todos los días: para demostrar que cuando hay raíz, convicción y pasión, las marcas pueden crecer con identidad y propósito.
         </p>
-<div class="about-cta">
-  <a href="#contacto" class="btn btn-primary about__cta">¡Contactanos!</a>
 
-  <img
-    src="medialuna-2.png"
-    alt=""
-    class="about__medialuna"
-    aria-hidden="true"
-    loading="lazy"
-  >
-</div>
+        <div class="about-cta">
+          <a href="#contacto" class="btn btn-primary about__cta">¡Contactanos!</a>
+          <img src="medialuna-2.png" alt="" class="about__medialuna" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
 
+    </div>
+  </section>
+
+  
+
+  <!-- ==================== PORTFOLIO ==================== -->
+  <section id="portfolio" class="portfolio" aria-labelledby="ttl-portfolio">
+    <div class="pf-wrap reveal">
+      <h2 id="ttl-portfolio" class="pf-title">Conocé algunos de <em>nuestros proyectos</em></h2>
+
+      <div class="pf-grid">
+        <a class="pf-item" href="https://www.behance.net/gallery/238840041/Diseno-UXUI-FED25" target="_blank" rel="noopener">
+          <img class="pf-thumb" src="./pf-01.png" alt="Diseño UX/UI - FED25">
+          <span class="pf-cap">Diseño UX/UI — FED25</span>
+        </a>
+
+        <a class="pf-item" href="https://www.behance.net/gallery/238837431/Video-Conceptual-FED25" target="_blank" rel="noopener">
+          <img class="pf-thumb" src="./pf-02.png" alt="Video Conceptual - FED25">
+          <span class="pf-cap">Video Conceptual — FED25</span>
+        </a>
+
+        <a class="pf-item" href="https://www.behance.net/gallery/238823253/Campana-audiovisual-Nike" target="_blank" rel="noopener">
+          <img class="pf-thumb" src="./pf-03.png" alt="Campaña audiovisual - Nike">
+          <span class="pf-cap">Campaña Audiovisual — Nike</span>
+        </a>
+
+        <a class="pf-item" href="https://www.behance.net/gallery/149109831/Libro-album-Hoy-todo-sale-bien" target="_blank" rel="noopener">
+          <img class="pf-thumb" src="./pf-04.png" alt="Libro álbum - Hoy todo sale bien">
+          <span class="pf-cap">Libro Álbum — Hoy todo sale bien</span>
+        </a>
+
+        <a class="pf-item" href="https://www.behance.net/gallery/191228919/Rediseno-App-Tu-Bondi" target="_blank" rel="noopener">
+          <img class="pf-thumb" src="./pf-05.png" alt="Rediseño App - Tu Bondi">
+          <span class="pf-cap">Rediseño App — Tu Bondi</span>
+        </a>
+
+        <a class="pf-item" href="https://www.behance.net/gallery/177750241/LIA-Dance-Reel" target="_blank" rel="noopener">
+          <img class="pf-thumb" src="./pf-06.png" alt="LIA Dance Reel">
+          <span class="pf-cap">LIA — Dance Reel</span>
+        </a>
       </div>
     </div>
   </section>
-<!-- ==================== PORTFOLIO ==================== -->
-<section id="portfolio" class="portfolio" aria-labelledby="ttl-portfolio">
-  <div class="pf-wrap reveal">
-
-    <h2 id="ttl-portfolio" class="pf-title">
-      Conocé algunos de <em>nuestros proyectos</em>
-    </h2>
-
-    <div class="pf-grid">
-      <a class="pf-item" href="https://www.behance.net/gallery/238840041/Diseno-UXUI-FED25" target="_blank" rel="noopener">
-        <img class="pf-thumb" src="./pf-01.png" alt="Diseño UX/UI - FED25">
-        <span class="pf-cap">Diseño UX/UI — FED25</span>
-      </a>
-
-      <a class="pf-item" href="https://www.behance.net/gallery/238837431/Video-Conceptual-FED25" target="_blank" rel="noopener">
-        <img class="pf-thumb" src="./pf-02.png" alt="Video Conceptual - FED25">
-        <span class="pf-cap">Video Conceptual — FED25</span>
-      </a>
-
-      <a class="pf-item" href="https://www.behance.net/gallery/238823253/Campana-audiovisual-Nike" target="_blank" rel="noopener">
-        <img class="pf-thumb" src="./pf-03.png" alt="Campaña audiovisual - Nike">
-        <span class="pf-cap">Campaña Audiovisual — Nike</span>
-      </a>
-
-      <a class="pf-item" href="https://www.behance.net/gallery/149109831/Libro-album-Hoy-todo-sale-bien" target="_blank" rel="noopener">
-        <img class="pf-thumb" src="./pf-04.png" alt="Libro álbum - Hoy todo sale bien">
-        <span class="pf-cap">Libro Álbum — Hoy todo sale bien</span>
-      </a>
-
-      <a class="pf-item" href="https://www.behance.net/gallery/191228919/Rediseno-App-Tu-Bondi" target="_blank" rel="noopener">
-        <img class="pf-thumb" src="./pf-05.png" alt="Rediseño App - Tu Bondi">
-        <span class="pf-cap">Rediseño App — Tu Bondi</span>
-      </a>
-
-      <a class="pf-item" href="https://www.behance.net/gallery/177750241/LIA-Dance-Reel" target="_blank" rel="noopener">
-        <img class="pf-thumb" src="./pf-06.png" alt="LIA Dance Reel">
-        <span class="pf-cap">LIA — Dance Reel</span>
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
 
   <!-- ==================== CONTACTO ==================== -->
   <section id="contacto" class="contacto" aria-labelledby="ttl-contacto">
@@ -408,16 +446,10 @@
         </p>
       </div>
 
-      <form
-        class="contacto__card contacto--float"
-        name="contacto-andina"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="empresa"
-        data-netlify-honeypot="empresa"
-        novalidate
-        action="/gracias.html"
-      >
+      <form class="contacto__card contacto--float" name="contacto-andina" method="POST"
+            data-netlify="true" netlify-honeypot="empresa" data-netlify-honeypot="empresa"
+            novalidate action="/gracias.html">
+
         <input type="hidden" name="form-name" value="contacto-andina">
 
         <p style="display:none">
@@ -449,9 +481,7 @@
             <option>Producción audiovisual</option>
             <option>Consultoría</option>
           </select>
-
           <span>Seleccioná un tema</span>
-
           <svg class="caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
           </svg>
@@ -501,8 +531,10 @@
 
       <div class="footer-bottom">
         <p class="footer-copy">
-          © 2025 Andina, todos los derechos reservados <span class="dot">|</span>
-          <a href="#" class="js-open-modal" data-modal="modal-legal">Aviso legal</a> <span class="dot">|</span>
+          © 2025 Andina, todos los derechos reservados
+          <span class="dot">|</span>
+          <a href="#" class="js-open-modal" data-modal="modal-legal">Aviso legal</a>
+          <span class="dot">|</span>
           <a href="#" class="js-open-modal" data-modal="modal-cookies">Política de cookies</a>
         </p>
         <p class="footer-madeby">By Andina Agencia Creativa</p>
@@ -513,12 +545,9 @@
   <!-- ==================== MODAL: AVISO LEGAL ==================== -->
   <div class="modal" id="modal-legal" role="dialog" aria-modal="true" aria-labelledby="modal-legal-title" aria-hidden="true">
     <div class="modal__backdrop" data-close="true"></div>
-
     <div class="modal__panel" role="document" tabindex="-1">
       <button class="modal__close" type="button" aria-label="Cerrar" data-close="true">✕</button>
-
       <h3 id="modal-legal-title" class="modal__title">Aviso legal</h3>
-
       <div class="modal__content">
         <p><strong>Andina Agencia Creativa</strong> (en adelante, “Andina”) pone a disposición este sitio web con fines informativos y comerciales para presentar servicios creativos, branding, diseño, contenido y comunicación.</p>
 
@@ -555,12 +584,9 @@
   <!-- ==================== MODAL: POLÍTICA DE COOKIES ==================== -->
   <div class="modal" id="modal-cookies" role="dialog" aria-modal="true" aria-labelledby="modal-cookies-title" aria-hidden="true">
     <div class="modal__backdrop" data-close="true"></div>
-
     <div class="modal__panel" role="document" tabindex="-1">
       <button class="modal__close" type="button" aria-label="Cerrar" data-close="true">✕</button>
-
       <h3 id="modal-cookies-title" class="modal__title">Política de cookies</h3>
-
       <div class="modal__content">
         <p>En <strong>Andina</strong> usamos cookies y tecnologías similares para mejorar la experiencia de navegación, entender el uso del sitio y optimizar contenidos.</p>
 
@@ -593,137 +619,17 @@
     </div>
   </div>
 
-  <!-- ==================== SCRIPTS ==================== -->
-  <script>
-    // Header sólido al hacer scroll
-    (function () {
-      const header = document.querySelector('header');
-      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 50);
-      onScroll();
-      window.addEventListener('scroll', onScroll, { passive: true });
-    })();
+  <!-- ==================== BOTÓN VOLVER ARRIBA ==================== -->
+  <button class="to-top" type="button" aria-label="Volver al inicio">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5l-7 7m7-7l7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 
-    // Menú hamburguesa
-    (function () {
-      const burger = document.querySelector('.hamburger-btn');
-      const navbar = document.querySelector('.navbar');
+  <script src="script.js"></script>
+</body>
+</html>
 
-      burger.addEventListener('click', () => {
-        const open = navbar.classList.toggle('active');
-        burger.classList.toggle('active', open);
-        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    })();
-
-    // Sincroniza --header-h con la altura real del header (para scroll-margin-top)
-    (function () {
-      const root = document.documentElement;
-      const header = document.querySelector('header');
-
-      function applyHeaderHeight() {
-        const h = header ? header.offsetHeight : 96;
-        root.style.setProperty('--header-h', h + 'px');
-      }
-
-      applyHeaderHeight();
-      window.addEventListener('load', applyHeaderHeight, { once: true });
-
-      let t;
-      window.addEventListener('resize', () => {
-        clearTimeout(t);
-        t = setTimeout(applyHeaderHeight, 120);
-      });
-    })();
-
-    // Enlace activo con IntersectionObserver
-    (function () {
-      const links = Array.from(document.querySelectorAll('.nav-center a'));
-
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-
-          const id = entry.target.id;
-
-          links.forEach(a => {
-            const on = a.getAttribute('href') === '#' + id;
-            a.classList.toggle('active', on);
-
-            if (on) a.setAttribute('aria-current', 'page');
-            else a.removeAttribute('aria-current');
-          });
-        });
-      }, { root: null, rootMargin: '0px 0px -60% 0px', threshold: 0 });
-
-      document.querySelectorAll('section[id]').forEach(s => io.observe(s));
-    })();
-
-    // Animaciones reveal
-    (function () {
-      const els = document.querySelectorAll('.reveal');
-
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.15 });
-
-      els.forEach(el => io.observe(el));
-    })();
-
-    // Modales: Aviso legal + Cookies
-    (function () {
-      const openers = document.querySelectorAll('.js-open-modal');
-      const modals = document.querySelectorAll('.modal');
-      let lastFocus = null;
-
-      function openModal(modal) {
-        if (!modal) return;
-        lastFocus = document.activeElement;
-        modal.classList.add('is-open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-
-        const panel = modal.querySelector('.modal__panel');
-        if (panel) panel.focus({ preventScroll: true });
-      }
-
-      function closeModal(modal) {
-        if (!modal) return;
-        modal.classList.remove('is-open');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-
-        if (lastFocus && typeof lastFocus.focus === 'function') {
-          lastFocus.focus({ preventScroll: true });
-        }
-      }
-
-      openers.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const id = btn.getAttribute('data-modal');
-          openModal(document.getElementById(id));
-        });
-      });
-
-      modals.forEach(modal => {
-        modal.addEventListener('click', (e) => {
-          if (e.target && e.target.getAttribute('data-close') === 'true') {
-            closeModal(modal);
-          }
-        });
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key !== 'Escape') return;
-        const opened = document.querySelector('.modal.is-open');
-        if (opened) closeModal(opened);
-      });
-    })();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

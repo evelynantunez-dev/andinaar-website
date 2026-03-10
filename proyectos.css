@@ -542,15 +542,11 @@
 .alaska-carousel-track{
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   width: max-content;
   padding: 0 60px;
   animation: alaskaCarouselScroll 45s linear infinite;
   will-change: transform;
-}
-
-.alaska-carousel:hover .alaska-carousel-track{
-  animation-play-state: paused;
 }
 
 .alaska-carousel .alaska-gallery-item{
@@ -566,7 +562,6 @@
 }
 
 .alaska-carousel .alaska-gallery-item:hover{
-  transform: scale(1.03);
   box-shadow: 0 20px 48px rgba(8,38,44,.11);
 }
 
@@ -596,7 +591,7 @@
 
 @media (max-width: 640px){
   .alaska-carousel-track{
-    gap: 16px;
+    gap: 30px;
     padding: 0 20px;
   }
 
@@ -644,10 +639,6 @@
   will-change: transform;
 }
 
-.alaska-carousel:hover .alaska-carousel-track{
-  animation-play-state: paused;
-}
-
 .alaska-carousel .alaska-gallery-item{
   flex: 0 0 auto;
   width: clamp(320px, 32vw, 620px);
@@ -661,7 +652,6 @@
 }
 
 .alaska-carousel .alaska-gallery-item:hover{
-  transform: scale(1.03);
   box-shadow: 0 20px 48px rgba(8,38,44,.11);
 }
 
@@ -690,7 +680,7 @@
 
 @media (max-width: 640px){
   .alaska-carousel-track{
-    gap: 16px;
+    gap: 30px;
     padding: 0 20px;
   }
 
@@ -1053,15 +1043,11 @@ object-fit: cover;
 .kevin-carousel-track{
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   width: max-content;
   padding: 0 60px;
   animation: kevinCarouselScroll 42s linear infinite;
   will-change: transform;
-}
-
-.kevin-carousel:hover .kevin-carousel-track{
-  animation-play-state: paused;
 }
 
 .kevin-carousel .kevin-gallery-item{
@@ -1077,7 +1063,6 @@ object-fit: cover;
 }
 
 .kevin-carousel .kevin-gallery-item:hover{
-  transform: scale(1.03);
   box-shadow: 0 20px 48px rgba(8,38,44,.11);
 }
 
@@ -1386,7 +1371,7 @@ object-fit: cover;
   }
 
   .kevin-carousel-track{
-    gap: 16px;
+    gap: 30px;
     padding: 0 20px;
   }
 
@@ -1643,15 +1628,11 @@ object-fit: cover;
 .vertech-carousel-track{
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   width: max-content;
   padding: 0 60px;
   animation: vertechCarouselScroll 42s linear infinite;
   will-change: transform;
-}
-
-.vertech-carousel:hover .vertech-carousel-track{
-  animation-play-state: paused;
 }
 
 .vertech-carousel .vertech-gallery-item{
@@ -1667,7 +1648,6 @@ object-fit: cover;
 }
 
 .vertech-carousel .vertech-gallery-item:hover{
-  transform: scale(1.03);
   box-shadow: 0 20px 48px rgba(8,38,44,.11);
 }
 
@@ -1971,7 +1951,7 @@ object-fit: cover;
   }
 
   .vertech-carousel-track{
-    gap: 16px;
+    gap: 30px;
     padding: 0 20px;
   }
 

@@ -188,7 +188,15 @@ header.scrolled { background: var(--azul) }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background: var(--azul);
   z-index: 0;
+  opacity: 0;
+  animation: heroVideoFade 1s ease-in-out forwards;
+}
+
+@keyframes heroVideoFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* OVERLAY */

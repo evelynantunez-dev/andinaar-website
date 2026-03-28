@@ -38,6 +38,7 @@
   <!-- Preload imágenes -->
   <link rel="preload" as="image" href="andina-header.jpg">
   <link rel="preload" as="image" href="andina1.png">
+  <link rel="preload" as="video" href="landing.mp4" type="video/mp4">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -75,7 +76,7 @@
 
   <!-- ==================== HERO ==================== -->
   <section id="inicio" class="hero" aria-label="Portada">
-    <video class="hero-video" autoplay muted playsinline preload="metadata">
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
       <source src="landing.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>

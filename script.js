@@ -6,6 +6,36 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
+// Hero video: evitar poster por defecto, forzar reproducción y fade-in cuando está listo
+(function () {
+  const video = document.querySelector('.hero-video');
+  if (!video) return;
+
+  const markLoaded = () => video.classList.add('is-loaded');
+  const playVideo = () => {
+    const promise = video.play();
+    if (promise && promise.catch) {
+      promise.catch(() => {
+        video.muted = true;
+        video.play().catch(() => {});
+      });
+    }
+  };
+
+  video.addEventListener('loadeddata', () => {
+    markLoaded();
+    playVideo();
+  }, { once: true });
+
+  video.addEventListener('canplay', () => {
+    playVideo();
+  }, { once: true });
+
+  if (video.readyState >= 2) {
+    markLoaded();
+  }
+})();
+
 // Menú hamburguesa
 (function () {
   const burger = document.querySelector('.hamburger-btn');

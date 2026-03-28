@@ -191,12 +191,11 @@ header.scrolled { background: var(--azul) }
   background: var(--azul);
   z-index: 0;
   opacity: 0;
-  animation: heroVideoFade 1s ease-in-out forwards;
+  transition: opacity .75s ease-in-out;
+  will-change: opacity;
 }
-
-@keyframes heroVideoFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.hero-video.is-loaded {
+  opacity: 1;
 }
 
 /* OVERLAY */

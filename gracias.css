@@ -1,5 +1,8 @@
 /* ==================== VARIABLES ==================== */
 :root{
+  color-scheme: only light;
+  forced-color-adjust: none;
+
   --claro: #FFFFF3;
   --oscuro: #08262C;
   --azul: #003945;
